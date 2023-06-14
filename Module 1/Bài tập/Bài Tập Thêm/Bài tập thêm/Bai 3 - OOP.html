@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 3</title>
+    <style>
+        *{
+            font-size: 35px;
+        }
+        table, td, tr, th {
+            margin-top: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: #8060ff;
+            padding: 10px 20px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            transition: 0.5s;
+            border: 2px solid black;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: white;
+            color: darkblue;
+        }
+        .centerContent{
+            text-align: center;
+        }
+        #option{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="show"></div>
+<div id="option">
+    <button onclick="addBike()">Thêm mới xe máy</button>
+    <button onclick="deleteBike()">Xóa một xe</button>
+</div>
+<script>
+    class Bike {
+        constructor(code, name, personalID, brand, paid) {
+            this.code = code;
+            this.name = name;
+            this.personalID = personalID;
+            this.brand = brand;
+            this.paid = paid;
+        }
+    }
+
+    let Bikes = [
+        new Bike("76-T8 59213", "Dương Văn Bảo", 212882393, "Honda", 50000),
+        new Bike("54-F7 64342", "Hồ Gia Long", 534231423, "Ducati", 24000),
+        new Bike("75-C2 52341", "Đỗ Hiền", 533563231, "Suzuki", 36000),
+        new Bike("32-F1 53434", "Trần Tịnh Thanh", 534134123, "Hãng khác", 40000),
+        new Bike("92-F2 64331", "Cao Hoàng Mai", 654234234, "Piaggio", 12000),
+        new Bike("75-T8 89423", "Đỗ Trọng Hùng", 231356785, "Sym", 2000)
+    ];
+
+    showBikes(Bikes);
+
+    function deleteBike() {
+        let code = prompt("Nhập biển số xe mà người đùng muốn xóa");
+        for (let i = 0; i < Bikes.length; i++) {
+            if (Bikes[i].code === code) {
+                let confirmDelete = confirm("Bạn có chắc muốn xóa xe có biển số " + Bikes[i].code+" ra khỏi hệ thống không");
+                if (confirmDelete) {
+                    Bikes.splice(i, 1);
+                    showBikes(Bikes);
+                    alert("Xóa thành công!");
+                }
+            }
+        }
+    }
+
+    function addBike() {
+        let isValid;
+        let newBike = new Bike();
+        do {
+            let code = prompt("Nhập biển số xe cần thêm mới");
+            if (code.length <= 20) {
+                for (let i = 0; i < Bikes.length; i++) {
+                    if (Bikes[i].code === code) {
+                        alert("Biển số xe vừa nhập đã tồn tại trong hệ thống!");
+                        isValid = false;
+                    }
+                }
+                newBike.code = code;
+                isValid = true;
+            } else {
+                alert("Biển số xe tối đa 20 ký tự");
+                isValid = false;
+            }
+        }
+        while (!isValid);
+        do {
+            let name = prompt("Nhập họ tên sinh viên");
+            if (name.length <= 20) {
+                newBike.name = name;
+                isValid = true;
+            } else {
+                alert("Tên sinh viên tối đa 40 ký tự");
+                isValid = false;
+            }
+        }
+        while (!isValid);
+        do {
+            let personalID = +prompt("Nhập Chứng minh nhân dân");
+            if (!isNaN(personalID)) {
+                newBike.personalID = personalID;
+                isValid = true;
+            } else {
+                alert("Chứng minh nhân dân là kiểu số");
+                isValid = false;
+            }
+        }
+        while (!isValid);
+        do {
+            let brandList = ["Honda", "Yamaha", "Sym", "Piaggio", "Suzuki", "Ducati", "Hãng khác"];
+            let brand = prompt("Nhập Hãng xe máy từ danh sách (Honda,Yamaha,Sym,Piaggio,Suzuki,Ducati,Hãng khác)");
+            if (brandList.indexOf(brand) !== -1) {
+                newBike.brand = brand;
+                isValid = true;
+            } else {
+                alert("Hãng xe máy không có trong danh sách!");
+                isValid = false;
+            }
+        }
+        while (!isValid);
+        do {
+            let paid = +prompt("Nhập phí gửi xe đã đóng");
+            if (!isNaN(paid)) {
+                newBike.paid = paid;
+                isValid = true;
+            } else {
+                alert("Phí gửi xe là kiểu số");
+                isValid = false;
+            }
+        }
+        while (!isValid);
+        alert("Thêm xe thành công!");
+        Bikes.push(newBike);
+        showBikes(Bikes);
+    }
+
+    function showBikes(arrBike) {
+        let tbl = "<table cellpadding='5'><tr><th>Biển số xe</th><th>Họ tên sinh viên</th><th>Chứng minh nhân dân</th><th>Hãng xe máy</th><th>Phí gửi xe máy đã đóng</th></tr>";
+        for (let i = 0; i < arrBike.length; i++) {
+            tbl += "<tr><td>" + arrBike[i].code + "</td>";
+            tbl += "<td>" + arrBike[i].name + "</td>";
+            tbl += "<td class='centerContent'>" + arrBike[i].personalID + "</td>";
+            tbl += "<td class='centerContent'>" + arrBike[i].brand + "</td>";
+            tbl += "<td class='centerContent'>" + arrBike[i].paid + "</td></tr>";
+        }
+        tbl += "</table>";
+        document.getElementById('show').innerHTML = tbl;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp while</title>
+</head>
+<body>
+
+<!--Bai 1 -->
+<script>
+    let sum = 0;
+    let n = prompt("Nhập vào một số: ");
+
+    while (n != -1) {
+        sum += parseInt(n);
+        n = prompt("Nhập vào một số: ");
+    }
+    alert("Tổng các giá trị vừa nhập là: " + sum);
+</script>
+
+<!--Bai 2-->
+<script>
+    let i = 1 ;
+    while(i < 100){
+        document.write("<hr width = "+ i + "%>"+"<br>");
+        i++;
+    }
+</script>
+</body>
+</html>

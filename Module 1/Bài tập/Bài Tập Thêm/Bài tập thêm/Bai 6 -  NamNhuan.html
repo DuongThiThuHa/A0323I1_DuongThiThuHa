@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 2</title>
+</head>
+<body>
+<script>
+    let inp = prompt("Nhập chuỗi theo định dạng(đd/mm/yyyy)");
+    isLeapYear(inp);
+
+    function isLeapYear(str) {
+        if (!checkStrIsDate(str)) {
+            console.log("Yêu cầu nhập đúng định dạng dd/MM/yyyy");
+        } else {
+            let a = str.split("/");
+            let check = false;
+            if ((1 * a[2]) % 4 === 0) {
+                if ((1 * a[2]) % 100 === 0) {
+                    check = ((1 * a[2]) % 400 === 0);
+                } else {
+                    check = true;
+                }
+            }
+            if (!check) {
+                console.log(a[2] + " không là năm nhuận.");
+            } else {
+                console.log(a[2] + " là năm nhuận.");
+            }
+        }
+    }
+
+    function checkStrIsDate(str) {
+        let a = str.split("/");
+        return a.length === 3 && (a[0].length > 0 && a[0].length <= 2) && (a[1].length > 0 && a[1].length <= 2) && (a[2].length === 4);
+    }
+</script>
+</body>
+</html>

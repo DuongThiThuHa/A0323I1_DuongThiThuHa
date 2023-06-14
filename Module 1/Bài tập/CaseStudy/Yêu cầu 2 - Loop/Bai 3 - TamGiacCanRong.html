@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác cân rỗng </title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập chiều cao"));
+    let b = a * 2 - 1;
+    for (let i = 0; i <= a; i++){
+        for (let j = 1; j < (b/2) - i; j++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let m = 0; m < i * 2 - 1; m++) {
+            if (i === a) {
+                document.write("*");
+            } else if (m === 0 || m === i * 2 - 2) {
+                document.write("*");
+            } else {
+                document.write("&ensp;");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

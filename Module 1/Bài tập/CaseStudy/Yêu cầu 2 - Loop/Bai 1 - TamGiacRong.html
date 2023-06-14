@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác cân rỗng có chiều cao h</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập chiều cao"));
+    for (let i = 1; i <= a; i++) {
+        for (let j = 1; j <= a; j++) {
+            if (i === a) {
+                document.write("*");
+            }
+            else if (j === 1 || j === i) {
+                document.write("*");
+            }
+            else {
+                document.write("&ensp;");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

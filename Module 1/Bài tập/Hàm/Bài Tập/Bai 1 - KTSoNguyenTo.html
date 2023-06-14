@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap so tu nhien : ");
+
+    function isPrime(n) {
+        let flag = true;
+        if (n < 2) return flag = 0;
+        let i = 2;
+        while (i < n) {
+            if (n % i == 0) {
+                flag = false;
+                break;
+            }
+            i++;
+        }
+        return flag;
+    }
+
+    let check = isPrime(n);
+
+    if (check === true) {
+        alert(n + " la so nguyen to");
+    }
+    else {
+        alert(n + " khong phai la so nguyen to");
+    }
+
+
+</script>
+</body>
+</html>

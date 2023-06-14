@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02</title>
+</head>
+<body>
+<script>
+    let arr1 = prompt("Nhap vao cac phan tu trong mang : ");
+    let arr= []
+    for (let i = 0; i <arr1.length ; i++) {
+        arr[i] = arr1.slice(i,i+1);
+        if( arr[i] === "-"){
+            arr[i] = "_";
+        }
+    }
+    alert(arr.join(""));
+</script>
+</body>
+</html>

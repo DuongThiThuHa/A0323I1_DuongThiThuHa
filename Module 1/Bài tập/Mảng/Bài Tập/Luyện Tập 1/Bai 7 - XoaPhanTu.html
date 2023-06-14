@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let V = parseInt(prompt("Nhap vao 1 phan tu bat ky :"));
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt(`Nhap vao 10 phan tu ngau nhien :  ${i + 1}`));
+    }
+    let index = arr.indexOf(V);
+    if (index !== -1) {
+        arr.splice(index, 1);
+        alert(`${V} co trong mang , ${V} da xoa ra khoi mang `);
+    } else {
+        alert(`${V} khong co trong mang`);
+    }
+    alert(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let n;
+    let arr=[1, 13, 6, 23, 8, 47, 11, 3];
+    let array=[];
+
+    function checkSoNguyen(n) {
+        if (n < 2) {
+            return false;
+        }
+        if (n > 2) {
+            for (let i=2; i < n; i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function mangSoNguyen(array) {
+        let mangNguyenTo=[];
+        for (let i=0; i < array.length; i++) {
+            if (checkSoNguyen(array[i]) == true) {
+                mangNguyenTo.push(array[i]);
+            }
+        }
+        sapXep(mangNguyenTo);
+        document.write(mangNguyenTo);
+    }
+
+    function sapXep(array) {
+        for (let i=0; i < array.length; i++) {
+            for (let j=i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    let change=array[i];
+                    array[i]=array[j];
+                    array[j]=change;
+                }
+            }
+        }
+    }
+
+    mangSoNguyen(arr);
+</script>
+</body>
+</html>

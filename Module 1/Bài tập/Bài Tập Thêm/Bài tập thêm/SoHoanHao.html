@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So hoan hao</title>
+</head>
+<body>
+<script>
+    let a=+prompt("Nhap vao so thu nhat : ");
+    let b=+prompt("Nhap vao so thu hai : ");
+
+    let sum1=0;
+    let sum2=0;
+    let i=0;
+    for (let i=0; i < a; i++) {
+        if (a % i === 0) {
+            sum1+=i;
+        }
+    }
+
+    for (let i=0; i < b; i++) {
+        if (b % i === 0) {
+            sum2+=i;
+        }
+    }
+
+    if (sum1 === a) {
+        document.write(a + " la so hoan hao" + "<br>");
+    } else {
+        document.write(a + " khong phai la so hoan hao" + "<br>");
+    }
+
+    if (sum2 === b) {
+        document.write(b + " la so hoan hao" + "<br>");
+    } else {
+        document.write(b + " khong phai la so hoan hao");
+    }
+
+
+    // function isPerfectNumber(number) {
+    //     let count=0;
+    //     for (let i=1; i <= number / 2; i++) {
+    //         if (!(number % i)) {
+    //             count+=i;
+    //         }
+    //     }
+    //     if (count === number) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // }
+    //
+    // if (isPerfectNumber(a)) {
+    //     document.write(a + " la so hoan hao" + "<br>");
+    // } else {
+    //     document.write(a + " khong phai la so hoan hao" + "<br>");
+    // }
+    // if (isPerfectNumber(b)) {
+    //     document.write(b + " la so hoan hao" + "<br>");
+    // } else {
+    //     document.write(b + " khong phai la so hoan hao");
+    // }
+</script>
+</body>
+</html>

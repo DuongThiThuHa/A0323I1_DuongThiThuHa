@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max thu 2</title>
+</head>
+<body>
+<script>
+    function findSecondLargestNumber(arr) {
+        let largest = -Infinity;
+        let secondLargest = -Infinity;
+
+        // Tìm số lớn nhất trong mảng
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                secondLargest = largest;
+                largest = arr[i];
+            } else if (arr[i] > secondLargest && arr[i] !== largest) {
+                secondLargest = arr[i];
+            }
+        }
+
+        // Trả về số lớn nhất thứ 2
+        return secondLargest;
+    }
+
+    // Ví dụ
+    let arr = [5, 2, 9, 8, 7];
+    alert(arr);
+    alert(findSecondLargestNumber(arr)); // 8
+</script>
+</body>
+</html>

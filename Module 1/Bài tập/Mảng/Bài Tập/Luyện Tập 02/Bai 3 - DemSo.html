@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhap vao so luong phan tu trong mang ");
+    let arr = [];
+    let dem = 0;
+    for (let i = 0; i <= n; i++) {
+        arr[i] = +prompt("Nhap vao : ");
+        if (!isNaN(arr[i])) {
+            dem++;
+        }
+    }
+    alert("So ki tu so trong mang :  " + dem);
+</script>
+</body>
+</html>

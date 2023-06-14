@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ràng buộc dữ liệu vào là số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhap vao 1 so bat ky : ");
+    let n = 2;
+
+    if (number < 2){
+        alert("Khong phai la so nguyen to");
+    }
+    for (let i = 2; i <= number -1; i++) {
+        if (number % i === 0 ){
+            alert("Khong phai la so nguyen to ");
+            break;
+        }else {
+            alert(number+ " la so nguyen to ");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+<!--IPhone-->
+<h1 style="color: #576eb5">Iphone</h1>
+<button id="iphone" onclick="onOff(this.id)">Off</button>
+<button id="battery_ip"></button>
+<button id="number"></button>
+<button id="charge_ip" onclick="upBattery()">Charge Battery</button>
+<button id="send_ip" onclick="sendMessage(this.id)">Send</button>
+<button id="send_ip1" onclick="readMes()">Read</button>
+<textarea id="screen_iphone" disabled></textarea>   <!--disabled: khongkhadung-->
+
+<hr>
+<!--Nokia-->
+<h1 style="color: #b29303">Nokia</h1>
+<button id="nokia" onclick="onOff(this.id)">Off</button>
+<button id="battery_no"></button>
+<button id="number1"></button>
+<button id="charge_no" onclick="upBattery()">Charge Battery</button>
+<button id="send_no1" onclick="sendMessages('send_no')">Send</button>
+<button id="send_no" onclick="readMesNokia()">Read</button>
+<textarea id="screen_nokia" disabled></textarea>
+
+<script>
+    class Mobile {
+        status; // Trang thai bat/tat
+        battery; // Tinh trang pin
+        outBox; // Xuat tin nhan
+        inBox; //Nhap tin nhan
+
+        constructor(status, battery, inBox, outBox) {
+            this.status = status;
+            this.battery = battery;
+            this.outBox = [];
+            this.inBox = [];
+        }
+
+        //Status
+        setStatus(status) {
+            this.status = !status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        //Battery
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        //OutBox
+        getOutBox() {
+            return this.outBox;
+        }
+
+        setOutBox(outBox) {
+            this.outBox = outBox;
+        }
+
+        //InBox
+        getInBox() {
+            return this.inBox;
+        }
+
+        setInBox(inBox) {
+            this.inBox = inBox;
+        }
+    }
+
+    let iphone = new Mobile(false, 100);
+    let nokia = new Mobile(false, 100);
+
+    // Chuc nang bat/tat
+    function onOff(id) {
+        // Iphone
+        if (id === 'iphone') {
+            iphone.setStatus(iphone.getStatus());
+            if (iphone.getStatus()) {
+                let id_battery = 'battery_ip';
+                document.getElementById('iphone').innerHTML = "On";
+                document.getElementById("screen_iphone").disabled = false; // khong bat dt co the soan tin nhan
+                downBattery(id_battery)
+            } else {
+                document.getElementById('iphone').innerHTML = "Off";
+                document.getElementById("screen_iphone").disabled = true;  // bat dt khong the soan tin nhan
+            }
+        }
+
+        // Nokia
+        else {
+            nokia.setStatus(nokia.getStatus());
+            if (nokia.getStatus()) {
+                document.getElementById('nokia').innerHTML = "On";
+                document.getElementById("screen_nokia").disabled = false; // bat dt co the soan tin nhan
+
+            } else {
+                document.getElementById('nokia').innerHTML = "Off";
+                document.getElementById("screen_nokia").disabled = true; // khong bat dt khong the soan tin nhan
+            }
+        }
+    }
+
+    //Tinh trang pin
+    function showBattery() {
+        document.getElementById('battery_ip').innerHTML = iphone.getBattery() + "%";
+        document.getElementById('battery_no').innerHTML = nokia.getBattery() + "%";
+    }
+
+    showBattery();
+
+    let number = 10;       //Phan tram pin
+    let batteryDown;     //Giam phan tram pin
+    let batteryUp;      //Sac pin
+
+
+    //Tinh trang su dung pin
+    function downBattery() {
+        number--;
+        document.getElementById('number').innerHTML = number + '%';
+        document.getElementById('number1').innerHTML = number + '%';
+
+// Thong bao tinh trang pin duoi
+        // IPHONE
+        if (number <= 100 && number > 0) {
+            document.getElementById('iphone').innerHTML = "ON";
+        }
+
+        if (number === 20) {
+            document.getElementById('iphone').innerHTML = "ON";
+            alert("Dien thoai con " + number + "% . Vui long cam sac !");
+            document.getElementById("screen_iphone").disabled = false; // bat dt co the soan tin nhan
+        }
+
+        if (number === 10) {
+            document.getElementById('iphone').innerHTML = "ON";
+            alert("Dien thoai con " + number + "% . Vui long cam sac !");
+            document.getElementById("screen_iphone").disabled = false; // bat dt co the soan tin nhan
+        }
+
+        if (number === 0) {
+            document.getElementById('iphone').innerHTML = "OFF";
+            document.getElementById("screen_iphone").disabled = true;  // bat dt khong the soan tin nhan
+        }
+
+//         NOKIA
+        if (number <= 100 && number > 0) {
+            document.getElementById('nokia').innerHTML = "ON";
+        }
+
+        if (number === 20) {
+            document.getElementById('nokia').innerHTML = "ON";
+            alert("Dien thoai con " + number + "% . Vui long cam sac !");
+            document.getElementById("screen_nokia").disabled = false; // bat dt co the soan tin nhan
+        }
+
+        if (number === 10) {
+            document.getElementById('nokia').innerHTML = "ON";
+            alert("Dien thoai con " + number + "% . Vui long cam sac !");
+            document.getElementById("screen_nokia").disabled = false; // bat dt co the soan tin nhan
+        }
+
+        if (number === 0) {
+            document.getElementById('nokia').innerHTML = "OFF";
+            document.getElementById("screen_nokia").disabled = true;  // bat dt khong the soan tin nhan
+            return;
+        }
+        batteryDown = setTimeout(downBattery, 2000);
+    }
+
+    downBattery();
+
+    //Sạc pin
+    function upBattery() {
+        number++;
+        document.getElementById('number').innerHTML = number + '%';
+        document.getElementById('number1').innerHTML = number + '%';
+
+        // Thong bao tinh trang pin duoi
+        // IPHONE
+        if (number === 0) {
+            number++;
+        }
+
+        //NOKIA
+        if (number === 0) {
+            number++;
+            document.getElementById('nokia').innerHTML = "ON";
+        }
+        batteryUp = setTimeout(upBattery, 5000);
+    }
+
+    upBattery();
+
+
+    //Tin nhan iphone
+    let count = 0;
+
+    function sendMessage(id) {
+        let message = document.getElementById('screen_iphone').value;
+        if (id === 'send_ip') {
+            iphone.getOutBox().push(message);
+            nokia.setInBox(iphone.getOutBox())
+            count++;
+            document.getElementById('screen_nokia').value = "Ban co " + count + ' tin nhan';
+        } else {
+            nokia.getOutBox().push(message);
+        }
+    }
+
+    function readMes() {
+        document.getElementById('screen_iphone').value = iphone.getInBox();
+    }
+
+    //Tin nhan nokia
+    let count1 = 0;
+
+    function sendMessages(id) {
+        let messages = document.getElementById('screen_nokia').value;
+        if (id === 'send_no') {
+            nokia.getOutBox().push(messages);
+            iphone.setInBox(nokia.getOutBox())
+            count1++;
+            document.getElementById('screen_iphone').value = "Ban co " + count1 + ' tin nhan';
+        } else {
+            iphone.getOutBox().push(messages);
+        }
+    }
+
+    function readMesNokia() {
+        document.getElementById('screen_nokia').value = nokia.getInBox();
+    }
+</script>
+</body>
+</html>

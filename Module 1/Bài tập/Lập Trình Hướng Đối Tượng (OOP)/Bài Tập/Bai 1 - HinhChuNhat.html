@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        getArea() {
+            let Area = this.height * this.width;
+            return Area;
+        }
+
+        getCircumference() {
+            let Circumference = (this.height + this.width) * 2;
+            return Circumference;
+        }
+    }
+
+    let height = +prompt("Nhap vao chieu dai: ");
+    let width = +prompt("Nhap vao chieu rong: ");
+
+    let Rectangle = new rectangle(height, width)
+    alert("Dien tich hinh chu nhat: " + Rectangle.getArea());
+    alert("Chu vi hinh chu nhat : " + Rectangle.getCircumference());
+
+</script>
+</body>
+</html>

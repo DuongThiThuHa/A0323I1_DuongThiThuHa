@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<script>
+    let year = +prompt("Nhap vao so nam ");
+    let flag = true;
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                flag = true;
+            }
+        }
+    } else {
+        flag = false
+    }
+
+    if (flag = true) {
+        alert(year + " La nam nhuan");
+    } else {
+        alert(year + " La nam khong nhuan")
+    }
+
+</script>
+</body>
+</html>

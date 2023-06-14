@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng hệ thống quản lý học viên CODEGYM</title>
+</head>
+
+<body>
+<input type="text" id="id" placeholder="Ma Sinh Vien">
+<input type="text" id="name" placeholder="Ten may tinh">
+<input type="text" id="companyName" placeholder="Ten hang may tinh">
+<input type="text" id="price" placeholder="Gia">
+<button id="btn-add" onclick="addNew()">Add</button>
+<button id="btn-edit" style="display: none" onclick="updateStudent()">Update</button>
+<p id="result"></p>
+<script>
+    class Computers {
+        constructor(id, name, companyName, price) {
+            this.id=id;
+            this.name=name;
+            this.companyName=companyName;
+            this.price=price;
+        }
+
+        setId(id) {
+            this.id=id;
+        }
+
+        setName(name) {
+            this.name=name;
+        }
+
+        setClassName(companyName) {
+            this.companyName=companyName;
+        }
+
+        setEmail(price) {
+            this.price=price;
+        }
+
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getCompanyName() {
+            return this.companyName;
+        }
+
+        getPriceEmail() {
+            return this.price;
+        }
+    }
+
+    let computersList=[];
+    let computers1=new Computers("Id-0001", "Asus Vivobook ES15CA2U", "Asus", "22.515.055");
+    let computers2=new Computers("Id-0002", " HP 15s fq2716TU i3 1115G4/8GB/512GB/Win11 (7C0X3PA)", "HP", "10.990.00012");
+    let computers3=new Computers("Id-0003", "Lenovo ThinkBook 14 G3 ACL R5 5500U/8GB/512GB/Win11 (21A200R0VN)", "Lenovo", "11.990.000");
+    computersList.push(computers1, computers2, computers3);
+    display(computersList);
+
+    let updateIndex=-1;
+
+
+    function addNew() {
+        let id=document.getElementById("id").value;
+        let name=document.getElementById("name").value;
+        let companyName=document.getElementById("companyName").value;
+        let price=document.getElementById("price").value;
+
+        let newComputers=new Computers(id, name, companyName, price);
+        computersList.push(newComputers);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("companyName").value="";
+        document.getElementById("price").value="";
+        display(computersList);
+    }
+
+    function display(list) {
+        let tableString='<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>STT</th>\n' +
+            '       <th>ID</th>\n' +
+            '       <th>Name</th>\n' +
+            '       <th>CompanyName</th>\n' +
+            '       <th>Price</th>\n' +
+            '       <th>Edit</th>\n' +
+            '   </tr>';
+        for (let i=0; i < list.length; i++) {
+            tableString+='<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getCompanyName() + '</td>\n' +
+                '        <td>' + list[i].getPriceEmail()+ '</td>\n' +
+                '        <td><button onclick="showInfoEdit(' + i + ')">Edit</button></td>\n' +
+                '    </tr>'
+        }
+        tableString+='</table>'
+        document.getElementById("result").innerHTML=tableString;
+    }
+
+    function showInfoEdit(index) {
+        updateIndex=index;
+        document.getElementById("id").value=computersList[index].getId();
+        document.getElementById("name").value=computersList[index].getName();
+        document.getElementById("companyName").value=computersList[index].getCompanyName();
+        document.getElementById("price").value=computersList[index].getPriceEmail();
+        document.getElementById("btn-add").style.display="none";
+        document.getElementById("btn-edit").style.display="inline";
+
+    }
+
+</script>
+</body>
+</html>

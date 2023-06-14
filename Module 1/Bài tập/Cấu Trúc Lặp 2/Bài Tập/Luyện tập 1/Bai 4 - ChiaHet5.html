@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhap vao 1 so bat ky: ");
+    let n1 = 0;
+    let n2 = 1;
+    let dem;
+    let array = [];
+    for (let i = 0; i <= n; i++) {
+        document.write(n1 + "<br>");
+        dem = n1 + n2;
+        n1 = n2;
+        n2 = dem;
+
+        if (i % 5 === 0 || i % 5 === 5) {
+            array.push(i);
+        }
+    }
+    document.write("So chi het cho 5 la : " + array.join(" "));
+</script>
+</body>
+</html>

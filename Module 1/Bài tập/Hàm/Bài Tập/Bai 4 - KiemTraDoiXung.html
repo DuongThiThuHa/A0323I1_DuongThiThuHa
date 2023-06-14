@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(word) {
+        word = word.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+
+        if (word.length <= 1) {
+            return true;
+        }
+
+        if (word[0] === word[word.length - 1]) {
+            return isPalindrome(word.slice(1, word.length - 1));
+        } else {
+            return false;
+        }
+    }
+
+    alert(isPalindrome("school"));
+    alert(isPalindrome("hello"));
+    alert(isPalindrome("A man, a plan, a canal, Panama!"));
+</script>
+</body>
+</html>

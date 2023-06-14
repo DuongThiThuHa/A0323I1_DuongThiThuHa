@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PT Bac 2</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap vap so thu 1 ");
+    let b = +prompt("Nhap vao so thu 2 ");
+    let c = +prompt("Nhap vao so thu 3");
+    let x1 ;
+    let x2 ;
+    let T = 0;
+
+    function PT() {
+        if (a != 0) {
+            T = Math.pow(b, 2) - (4 * a * c);
+            alert(T);
+        } else {
+            alert("vi pham dieu kien a  khac 0");
+        }
+        if (T > 0) {
+            x1 = (-b + Math.sqrt(T)) / (2 * a);
+            x2 = (-b - Math.sqrt(T)) / (2 * a);
+            alert(x1);
+            alert(x2);
+        }
+        if (T == 0) {
+            x1 = -b / 2 * a;
+            x2 = -b / 2 * a;
+            alert(x1);
+            alert(x2);
+        }
+        if (T < 0) {
+            alert("PT vo nghiem");
+        }
+    }
+    PT();
+
+</script>
+</body>
+</html>

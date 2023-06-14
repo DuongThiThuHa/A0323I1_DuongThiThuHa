@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng hoà hợp</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n =+prompt("Nhap vao so luong cua mang ");
+
+    function checkArray(arr) {
+        let evenCount = 0;
+        let oddCount = 0;
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Nhap vao cac phan tu trong mang : ");
+            if (arr[i] % 2 === 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+        return (evenCount === oddCount) ? 'OK' : 'NO';
+    }
+
+    alert(checkArray(arr));
+</script>
+</body>
+</html>

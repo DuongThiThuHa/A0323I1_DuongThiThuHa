@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<div id="say"></div>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        set Name(name) {
+            this.name = name;
+        }
+
+        set Gender(gender) {
+            this.gender = gender;
+        }
+
+        set Weight(weight) {
+            return this.weight;
+        }
+
+        say() {
+            document.write("Toi la " + this.name + "<br>");
+        }
+
+        eatApple(apple) {
+            if (apple.weight > 0) {
+                this.weight++;
+                apple.weight--;
+                document.write(this.name + " da an 1 mieng tao " + apple.weight + "<br>");
+            } else {
+                document.write("Da an het tao ");
+            }
+        }
+    }
+
+    let Adam = new Human("Adam", true, 70);
+    document.write("Can nang cua Adam : " + Adam.weight + "<br>");
+    let Eva = new Human("Eva", false, 58);
+    document.write("Can nang cua Eva : " + Eva.weight + "<br>");
+    let apple = new Apple(10);
+    document.write("Can nang cua qua tao : " + apple.weight + "<br><br><br>");
+
+    for (let i = 1; i < 11; i++) {
+        Adam.eatApple(apple);
+        Eva.eatApple(apple);
+    }
+</script>
+</body>
+</html>

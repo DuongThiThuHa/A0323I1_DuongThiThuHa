@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung bình của các phần tử </title>
+</head>
+<body>
+<script>
+    let n=+prompt("Nhap vao so luong phan tu trong mang : ");
+    let array=[];
+    let array1=[];
+
+    let sum=0;
+    for (let i=0; i < 10; i++) {
+        array[i]= +prompt("Nhap vao lan luot cac phan tu trong mang tai vi tri : " + i);
+        if (array[i] % 5 === 0 && i % 3 === 0) {
+            array1.push(array[i]);
+        }
+    }
+    for (let j=0; j < array1.length; j++) {
+        sum+=array1[j];
+    }
+    let avg=sum / array1.length;
+
+    alert(array);
+    alert(array1);
+    alert("TB mang la : " + avg );
+</script>
+</body>
+</html>

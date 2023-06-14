@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    let arr1=[];
+    let n=+prompt("Nhap so luong pt mang ")
+    let arr=[];
+    for (let i=0; i < n; i++) {
+        arr[i]= +prompt("Nhap vao pt thu " + i);
+    }
+
+    let a=0;
+    let b=1;
+    let dem;
+    arr1.push(a);
+    for (let i=0; i < 10; i++) {
+        dem=a + b;
+        a=b;
+        b=dem;
+        arr1.push(a);
+    }
+
+    let kiemTra=[];
+    for (let i=0; i < arr.length; i++) {
+        for (let j=0; j < arr1.length; j++) {
+            if (arr[i] === arr1[j]) {
+                kiemTra.push(arr[i]);
+                break;
+            }
+        }
+    }
+
+    // kiemTra.sort();
+    for (let i=0; i < kiemTra.length; i++) {
+        for (let j=i+1; j < kiemTra.length; j++) {
+            if (kiemTra[i] > kiemTra[j]){
+                let t = kiemTra[i];
+                kiemTra[i] = kiemTra[j];
+                kiemTra[j] = t;
+            }
+
+        }
+    }
+    document.write(kiemTra);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+<script>
+    let array = ["1.Cafe - 15.000d", "2.Cam vat - 20.000d ", "3. Nuoc ep ca rot - 20.000d", "4.Nuoc ep ca chua - 15.000d", "5.Nuoc loc - 5.000d", "6.Nuoc dua - 20.000d", "7.Thoat goi mon"];
+    let value = [1, 2, 3, 4, 5, 6, 7];
+
+    do {
+        alert(array);
+        let numbers = +prompt("Nhap vao ma so mon muon goi (tu 1 den 7): ");
+        if (1 <= numbers && numbers <= 6) {
+            let quantity = +prompt("Nhap vao so luong muon mua: ");
+            let price;
+            switch (numbers) {
+                case 1:
+                    price = 15000;
+                    break;
+                case 2:
+                    price = 20000;
+                    break;
+                case 3:
+                    price = 20000;
+                    break;
+                case 4:
+                    price = 15000;
+                    break;
+                case 5:
+                    price = 5000;
+                    break;
+                case 6:
+                    price = 20000;
+                    break;
+            }
+            let total = price * quantity;
+            alert("Tong tien: " + total + "vnd");
+        } else if (numbers === 7) {
+            alert("Cam on quy khach da su dung dich vu cua toi ");
+            break;
+        } else {
+            alert("Nhap sai ma so mon muon goi ");
+        }
+    } while ( true );
+
+</script>
+</body>
+</html>

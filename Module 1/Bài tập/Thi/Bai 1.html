@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let a=[];
+    let b=[];
+    let sum=0;
+    let sum1=0;
+    let sub=0;
+
+    for (let i=0; i <= 3; i++) {
+        arr[i]= +prompt("Nhap vao cac phan tu thu " + i);
+        if (arr[i] % 2 === 0) {
+            a=arr[i];
+            sum+=a;
+        } else {
+            b=arr[i];
+            sum1+=b;
+        }
+    }
+    sub=sum - sum1;
+
+    alert(sub);
+</script>
+</body>
+</html>

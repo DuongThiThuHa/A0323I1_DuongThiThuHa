@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+let n = prompt("Nhap vao 1 so bat ky : ");
+for (let i = 1; i <= 100; i++) {
+    if (n % 3 === 0 || n % 3 ===3){
+        alert("Fizz");
+        break;
+    }else if (n  % 5 === 0 || n % 5 === 5){
+        alert("Buzz");
+        break;
+    }else if (n % 3 === 0 || n % 3 ===3 || n  % 5 === 0 || n % 5 === 5){
+        alert("FizzBuzz");
+        break;
+    }else {
+        alert("Khong tim thay thong tin !")
+    }
+}
+</script>
+</body>
+</html>

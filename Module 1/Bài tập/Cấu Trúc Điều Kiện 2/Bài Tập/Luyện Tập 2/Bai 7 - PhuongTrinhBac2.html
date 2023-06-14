@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhap vao so thu nhat : "));
+    let b = parseFloat(prompt("Nhap vao so thu hai : "));
+    let c = parseFloat(prompt("Nhap vao so thu ba : "));
+    let x1 , x2 ;
+    let t = (Math.pow(b, 2) - 4 * a * c);
+    if (a !== 0) {
+        if ( t < 0) {
+            alert("Phuong trinh vo nghiem ");
+        } else if (t === 0) {
+            x1 = x2 = -b / 2 * a;
+        } else if (t > 0){
+            x1 = ((-b + Math.sqrt(t)) / 2 * a);
+            x2 = ((-b - Math.sqrt(t)) / 2 * a);
+        }
+    }else {
+           alert("Phuong trinh khong ton tai ");
+    }
+</script>
+</body>
+</html>

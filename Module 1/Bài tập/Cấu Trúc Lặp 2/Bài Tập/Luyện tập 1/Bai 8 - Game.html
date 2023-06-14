@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<center>
+    <input type="button" onclick="play()" value="START" style="width: 100px ; height: 40px" >
+</center>
+<script>
+    function play() {
+        let min = +prompt("Nhap so nho nhat trong khoang ban muon doan :");
+        let max = +prompt("Nhap so lon nhat trong khoang ban muon doan :");
+        let random = (Math.floor(Math.random() * (max - min + 1)) + min);
+        let solannhap = 1;
+        let i = +prompt("Nhap vao khoang ban muon doan : ");
+        do {
+            if (i > random) {
+                i = prompt("Hay nhap so khac nho hon :");
+            }
+            if (i < random) {
+                i = prompt("Hay nhap so khac lon hon :");
+            }
+            if (i === random) {
+                i = alert("Chuc mung ban da doan dung !");
+            }
+            solannhap++;
+            if (solannhap === 3) {
+                alert("Ban da thua ! Nhan START de choi lai ");
+                break;
+            }
+        }
+        while (i !== random);
+    }
+</script>
+</body>
+</html>

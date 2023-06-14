@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Missing Value</title>
+</head>
+<body>
+<script>
+    let array2 = [];
+    let array1 = [];
+    function findValue(array1, array2) {
+        let n = +prompt("Nhap vao so luong cua mang array1");
+        for (let i = 0; i < n; i++) {
+            array1.push(+prompt("Nhap vao cac phan tu trong mang array1:"));
+        }
+
+        let m = +prompt("Nhap vao do dai mang array2: ");
+        for (let j = 0; j < m; j++) {
+            array2.push(+prompt("Nhap vao cac phan tu co trong mang array2: "));
+        }
+
+        let result = [];
+
+        for (let k = 0; k < array2.length; k++) {
+            if (array1.indexOf(array2[k]) === -1 && result.indexOf(array2[k]) === -1) {
+                result.push(array2[k]);
+            }
+        }
+        return result.sort();
+    }
+alert(findValue(array1,array2));
+
+</script>
+</body>
+</html>

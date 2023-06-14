@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class temperature{
+        constructor(tempC) {
+            this.tempC = tempC;
+        }
+
+        gettempF(){
+            let tempF = this.tempC*1800 + 32000;
+            return tempF;
+        }
+        gettempK(){
+            let tempK = this.tempC + 273.15;
+            return tempK;
+        }
+    }
+    let tempC = parseFloat(prompt("Nhap vao nhiet do C hien tai : "));
+
+    let Temperature = new temperature(tempC);
+    alert("Chuyen tu do C sang do F : "+Temperature.gettempF());
+    alert("Chuyen tu do C sang do K : "+Temperature.gettempK());
+</script>
+</body>
+</html>

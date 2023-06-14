@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tỉ lệ vắng nghỉ</title>
+</head>
+<body>
+<script>
+    let a =+ prompt("Nhap vao tổng số buổi của module");
+    let b =+ prompt("Nhap vao tổng số buổi nghỉ (");
+    let r = b/a;
+    if (r > 0.1){
+        alert(" gửi mail warning");
+    }else if (r >= 0.2){
+        alert("buộc chuyển lớp");
+    }
+</script>
+</body>
+</html>

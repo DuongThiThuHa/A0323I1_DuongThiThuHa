@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dếm các số nguyên tố có trong mảng </title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhap vao so dong hoac cot : "));
+    let arr = new Array(num);
+    for (let i = 0; i < num; i++) {
+        arr[i] = new Array(num);
+    }
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++) {
+            arr[i][j] = parseInt(prompt(`Nhap vao gia tri tai vi tri : (${i + 1},${j + 1}): `));
+        }
+    }
+
+    function isPrime(num) {
+        let flag = true;
+        if (num < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++) {
+            if (isPrime(arr[i][j])) {
+                count++;
+            }
+        }
+    }
+    alert(`Co ${count} so nguyen to trong mang`);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhap vao so thu nhat : "));
+    let b = parseFloat(prompt("Nhap vao so thu hai : "));
+    let x;
+    if (a !== 0 && b > 0) {
+        x = -b / a;
+    } else if (a !== 0 && b < 0) {
+        x = -b / a;
+    } else if (a === 0){
+        alert("Phuong trinh vo nghiem");
+    }
+    alert("Ngiem cua phuong trinh : " +x);
+</script>
+</body>
+</html>

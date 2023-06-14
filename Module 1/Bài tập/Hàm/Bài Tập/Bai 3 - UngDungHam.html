@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+    <input id="product" placeholder="Enter product name">
+    <button onclick="addProduct()">Add</button>
+    <p id="soLuong"></p>
+    <p id="result"></p>
+<script>
+    let productList = ["Sam sung ", "Nokia", "Iphone"];
+    display(productList);
+
+    //Them
+    function addProduct() {
+        let newProduct = document.getElementById("product").value;
+        if (newProduct !== " ") {
+            productList.push(newProduct);
+        } else {
+            alert("Please Enter product name");
+        }
+        document.getElementById("product").value = "";
+        display();
+    }
+
+    //Xoa
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xoá sản phẩm: " + productList[index]);
+        if (conf) {
+            productList.splice(index, 1);
+        }
+        display();
+    }
+
+    //Sua
+    function editProduct(index) {
+        let editProduct = prompt("Edit product ", productList[index]);
+        productList[index] = editProduct;
+        display();
+    }
+
+    //Hien Thi
+    function display() {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Edit1</th>\n' +
+            '        <th>Edit2</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+
+        for (let i = 0; i < productList.length; i++) {
+            tableString += '  <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + productList[i] + '</td>\n' +
+                '        <td><button onclick="editProduct(' + i + ')">Edit1</button></td>\n' +
+                '        <td><button>Edit2</button></td>\n' +
+                '        <td><button onclick="deleteProduct(' + i + ')">Delete</button></td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("result").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = "Số lượng sản phảm là : " + productList.length;
+    }
+
+</script>
+</body>
+</html>

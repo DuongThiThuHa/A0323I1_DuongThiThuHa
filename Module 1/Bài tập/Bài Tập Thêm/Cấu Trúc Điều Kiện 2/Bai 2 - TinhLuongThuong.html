@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương thưởng</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhap vao so tien luong : ");
+    let time = +prompt("Nhap vao so thoi gian lma viec : ");
+    let bonus;
+    if (time >= 100 && money < 200) {
+        bonus = money * 0.1;
+    } else if(time == 100 && money < 200) {
+        bonus = money * 0.05;
+    }
+    else {
+        alert("Khong co thuong ")
+    }
+</script>
+</body>
+</html>

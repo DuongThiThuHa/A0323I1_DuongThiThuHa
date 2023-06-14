@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Animal {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        say() {
+            document.write("chưa biết nói gì" + '<br>');
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        getSpeed() {
+            return this.speed;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    class Rat extends Animal {
+        constructor(name, weight, speed, status) {
+            super(name, weight, speed)
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        say(text) {
+            document.write("Chít chit : " + text + '<br>')
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(name, weight, speed) {
+            super(name, weight, speed)
+        }
+
+        say(text) {
+            document.write("Meo meo: " + text + '<br>');
+        }
+
+        eatRat(mouse) {
+            if (mouse.getStatus() == "song") {
+                this.say("Còn sống nên tao ăn")
+                this.setWeight(this.weight + mouse.getWeight())
+            } else {
+                this.say("Chết  rồi tao không ăn")
+            }
+        }
+
+        catchRat(mouse) {
+            if (this.speed > mouse.getSpeed()) {
+                this.say("Đã bắt được");
+                this.eatRat(mouse);
+            } else {
+                mouse.say("Đố bắt được");
+            }
+        }
+    }
+
+    // viết kịch bản đẻ chạy chương trình
+    let tom = new Cat("Tom", 10, 10);
+    let jerry = new Rat("Jerry1", 1, 5, "song");
+    let jerry2 = new Rat("Jerry2", 1, 15, "song");
+    let jerry3 = new Rat("Jerry3", 1, 5, "chet");
+    let jerry4 = new Rat("Jerry3", 1, 9, "song");
+    tom.catchRat(jerry);
+    tom.catchRat(jerry2);
+    tom.catchRat(jerry3);
+    tom.catchRat(jerry4);
+    document.write("khối lượng mèo: " + tom.getWeight() + '<br>');
+</script>
+</body>
+</html>

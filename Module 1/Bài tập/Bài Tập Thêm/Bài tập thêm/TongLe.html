@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LE-CHAN</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap vao so luong phan tu ");
+    let arr = [];
+    let dem = [];
+    let sum = 0;
+
+    function oddSum() {
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt("Nhap phan tu vao mang ");
+            if (arr[i] % 2 === 0) {
+                dem = arr[i];
+                sum += dem;
+            } else {
+                dem = arr[i];
+                sum += dem;
+            }
+        }
+        return sum;
+    }
+    oddSum();
+    console.log(sum);
+</script>
+</body>
+</html>

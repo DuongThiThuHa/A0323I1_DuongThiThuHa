@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng hệ thống quản lý học viên CODEGYM</title>
+</head>
+
+<body>
+<input type="text" id="id" placeholder="Enter Ma Sinh Vien">
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="className" placeholder="Enter Class">
+<input type="text" id="email" placeholder="Enter Email">
+<input type="text" id="birthday" placeholder="Enter Birthday">
+<input type="text" id="module" placeholder="Enter Module">
+<button id="btn-add" onclick="addNew()">Add</button>
+<button id="btn-edit" style="display: none" onclick="updateStudent()">Update</button>
+<p id="result"></p>
+<script>
+    class Students {
+        constructor(id, name, className, email, birthday, module) {
+            this.id=id;
+            this.name=name;
+            this.className=className;
+            this.email=email;
+            this.birthday=birthday;
+            this.module=module;
+        }
+
+        setId(id) {
+            this.id=id;
+        }
+
+        setName(name) {
+            this.name=name;
+        }
+
+        setClassName(className) {
+            this.className=className;
+        }
+
+        setEmail(email) {
+            this.email=email;
+        }
+
+        setBirthday(birthday) {
+            this.birthday=birthday;
+        }
+
+        setModule(module) {
+            this.module=module;
+        }
+
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getClassName() {
+            return this.className;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        }
+
+        getModule() {
+            return this.module;
+        }
+    }
+
+    let studentList=[];
+    let student1=new Students("HV-0001", "Nguyen Van A", "C1022G1", "nguyenvana@gmail.com", "01/01/2004", "1");
+    let student2=new Students("HV-0002", "Nguyen Van B", "C1122G1", "nguyenvanb@gmail.com", "02/02/2004", "2");
+    let student3=new Students("HV-0003", "Nguyen Thi C", "C1222G1", "nguyenthic@gmail.com", "03/03/2004", "3");
+    studentList.push(student1, student2, student3);
+    display(studentList);
+
+    let updateIndex=-1;
+
+    function updateStudent() {
+        let editId=document.getElementById("id").value;
+        let editName=document.getElementById("name").value;
+        let editClassName=document.getElementById("className").value;
+        let editEmail=document.getElementById("email").value;
+        let editBirthday=document.getElementById("birthday").value;
+        let editModule=document.getElementById("module").value;
+
+        studentList[updateIndex].setId(editId);
+        studentList[updateIndex].setName(editName);
+        studentList[updateIndex].setClassName(editClassName);
+        studentList[updateIndex].setEmail(editEmail);
+        studentList[updateIndex].setBirthday(editBirthday);
+        studentList[updateIndex].setModule(editModule);
+        document.getElementById("btn-add").style.display="inline";
+        document.getElementById("btn-edit").style.display="none";
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("className").value="";
+        document.getElementById("email").value="";
+        document.getElementById("birthday").value="";
+        document.getElementById("module").value="";
+        display(studentList);
+    }
+
+    function addNew() {
+        let id=document.getElementById("id").value;
+        let name=document.getElementById("name").value;
+        let className=document.getElementById("className").value;
+        let email=document.getElementById("email").value;
+        let birthday=document.getElementById("birthday").value;
+        let module=document.getElementById("module").value;
+
+        let newStudent=new Students(id, name, className, email, birthday, module);
+        studentList.push(newStudent);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("className").value="";
+        document.getElementById("email").value="";
+        document.getElementById("birthday").value="";
+        document.getElementById("module").value="";
+        display(studentList);
+    }
+
+    function deleteStudent(index) {
+        let conf=confirm("Do you delete student :" + studentList[index].getName() + "????");
+        if (conf) {
+            studentList.splice(index, 1);
+        }
+        display(studentList);
+    }
+
+    function display(list) {
+        let tableString='<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>#</th>\n' +
+            '       <th>ID</th>\n' +
+            '       <th>Name</th>\n' +
+            '       <th>ClassName</th>\n' +
+            '       <th>Email</th>\n' +
+            '       <th>Birthday</th>\n' +
+            '       <th>Module</th>\n' +
+            '       <th>Edit</th>\n' +
+            '       <th>Delete</th>\n' +
+            '   </tr>';
+        for (let i=0; i < list.length; i++) {
+            tableString+='<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getClassName() + '</td>\n' +
+                '        <td>' + list[i].getEmail() + '</td>\n' +
+                '        <td>' + list[i].getBirthday() + '</td>\n' +
+                '        <td>' + list[i].getModule() + '</td>\n' +
+                '        <td><button onclick="showInfoEdit(' + i + ')">Edit</button></td>\n' +
+                '        <td><button onclick="deleteStudent(' + i + ')">Delete</button></td>\n' +
+                '    </tr>'
+        }
+        tableString+='</table>'
+        document.getElementById("result").innerHTML=tableString;
+    }
+
+    function showInfoEdit(index) {
+        updateIndex=index;
+        document.getElementById("id").value=studentList[index].getId();
+        document.getElementById("name").value=studentList[index].getName();
+        document.getElementById("className").value=studentList[index].getClassName();
+        document.getElementById("email").value=studentList[index].getEmail();
+        document.getElementById("birthday").value=studentList[index].getBirthday();
+        document.getElementById("module").value=studentList[index].getModule();
+        document.getElementById("btn-add").style.display="none";
+        document.getElementById("btn-edit").style.display="inline";
+    }
+
+</script>
+</body>
+</html>

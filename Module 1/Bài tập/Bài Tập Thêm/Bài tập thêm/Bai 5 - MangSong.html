@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 1</title>
+</head>
+<body>
+<script>
+    let num = 0, a = [];
+    do {
+        num = +prompt("Nhập kích thước của mảng kí tự ");
+    }
+    while (num < 0 || num > 50);
+
+    for (let i = 0; i < num; i++) {
+        a[i] = +prompt("Nhập a[" + i + "]");
+    }
+    console.log(a);
+    console.log(checkWaveArr(a));
+
+    function checkWaveArr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (i !== 0 && i !== arr.length - 1) {
+                if (arr[i] > arr[i - 1]) {
+                    if (arr[i] <= arr[i + 1]) {
+                        return false;
+                    }
+                } else if (arr[i] < arr[i - 1]) {
+                    if (arr[i] >= arr[i + 1]) {
+                        return false;
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

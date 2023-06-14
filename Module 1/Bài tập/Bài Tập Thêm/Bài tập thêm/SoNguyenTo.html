@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So nguyen to</title>
+</head>
+<body>
+<script>
+    let n =+ prompt("Nhap vao so luong phan tu ");
+    let arr = [];
+    for (let i = 2; i < n; i++) {
+        arr[i] =+ prompt("Nhap vao phan tu trong mang ");
+        if (arr[i] % i === i) {
+            alert(i);
+        }else {
+            alert(" no ");
+        }
+    }
+</script>
+</body>
+</html>

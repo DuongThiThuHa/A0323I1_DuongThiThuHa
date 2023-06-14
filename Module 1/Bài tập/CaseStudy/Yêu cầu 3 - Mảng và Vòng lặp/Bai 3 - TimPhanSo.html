@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm chỉ số của phân số lớn nhất </title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominator = [];
+
+    function findIndexOfMaxFraction() {
+        const n = parseInt(prompt("Nhap so phan so: "));
+        for (let i = 0; i < n; i++) {
+            numerators[i] = parseInt(prompt("Nhap tu so: "));
+            denominator[i] = parseInt(prompt("Nhap mau so: "));
+        }
+        let maxIndex = 0;
+        for (let i = 1; i < n; i++) {
+            if (numerators[i] / denominator[i] > numerators[maxIndex] / denominator[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+
+    let index = findIndexOfMaxFraction();
+    alert("Chỉ số của phân số lớn nhất là:" + index);
+</script>
+</body>
+</html>

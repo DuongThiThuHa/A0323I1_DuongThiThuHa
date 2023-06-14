@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<script>
+    function kiemTra(arr, kytu) {
+        let n = 0;
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === kytu) {
+                check = true;
+                n = n + 1;
+            }
+        }
+        if (check === true) {
+            document.write("So lan xuat hien cua ky tu " + kytu + " o trong mang la : " + n);
+        }
+        if (check === false) {
+            document.write("-1");
+        }
+    }
+
+    let arr1 = new Array(parseInt(prompt("Nhap vao kich thuoc cua mang ")));
+    for (let i = 0; i < arr1.length; i++) {
+        arr1[i] = prompt("Nhap ki tu thu " + i + " vao mang");
+    }
+    let a = prompt("Nhap vao ki tu ");
+    kiemTra(arr1, a);
+
+</script>
+</body>
+</html>

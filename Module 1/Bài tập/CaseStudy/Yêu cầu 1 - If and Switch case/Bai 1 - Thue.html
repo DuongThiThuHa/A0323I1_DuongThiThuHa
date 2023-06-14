@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If và switch case</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhap vao so tien luong thu nhap duoc:  (don vi: trieu)");
+    let salary = 0;
+    if (number >= 15) {
+        salary = number * 0.2;
+    } else if (7 <= number <= 15) {
+        salary = number * 0.1;
+    } else if (number < 7) {
+        salary = number * 0.05;
+    }
+    alert("Tien thue can phai dong  la : " + salary);
+</script>
+</body>
+</html>

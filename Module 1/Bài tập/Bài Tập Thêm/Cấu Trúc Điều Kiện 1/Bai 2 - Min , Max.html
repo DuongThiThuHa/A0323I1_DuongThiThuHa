@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min - Max</title>
+</head>
+<body>
+<script>
+    let a = 3;
+    let b = 5;
+    let c = 2;
+    let d = 4;
+    let min;
+    let max;
+    max=Math.max(a,b,c,d);
+    min=Math.min(a,b,c,d);
+    alert("So nho nhat la : "+min);
+    alert("So lon nhat la : "+max);
+
+    let numbers = [a,b,c,d];
+    numbers.sort();
+    alert(numbers);
+
+    let myarray = [a,b,c,d];
+    myarray.sort(function(a, b) {
+        return b - a;
+    });
+    alert(myarray);
+
+
+
+
+</script>
+</body>
+</html>

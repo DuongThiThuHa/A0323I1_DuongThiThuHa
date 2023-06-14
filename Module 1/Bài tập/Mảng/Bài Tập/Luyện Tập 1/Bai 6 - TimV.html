@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt(`Enter element ${i + 1}`));
+    }
+    let V = parseInt(prompt("Enter a number:"));
+    if (arr.includes(V)) {
+        alert(`${V} is in the array`);
+    } else {
+        alert(`${V} is not in the array`);
+    }
+
+</script>
+</body>
+</html>

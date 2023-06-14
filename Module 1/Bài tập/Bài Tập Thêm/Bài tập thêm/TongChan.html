@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Array</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let a = [];
+    let sum = 0;
+    let n = +prompt("Nhap so luong phan tu trong mang : ")
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhap vao cac phan tu trong mang :");
+        if (arr[i] % 2 === 0) {
+            a = arr[i];
+            sum += a;
+        }
+    }
+    alert(sum);
+</script>
+</body>
+</html>

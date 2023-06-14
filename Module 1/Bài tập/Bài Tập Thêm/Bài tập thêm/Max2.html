@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhap vao 1 chuoi ki tu : ").split(" ");
+    /*Sắp xếp mảng số theo thứ tự tăng dần*/
+    arr.sort(function(a, b) {
+        return a - b;
+    });
+    document.write(arr+"<br>")
+    n = 2
+    document.write("max thứ "+n +"= ",arr[arr.length-n]);
+
+</script>
+</body>
+</html>

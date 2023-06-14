@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tốc độ già đi của cha</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap vao so tuoi cua cha : ");
+    let m = prompt("Nhap vao so tuoi cua con : ");
+    let count =0;
+    let flag = true ;
+        if (n - m >= 25) {
+            while (true){
+                m++;
+                n++;
+                count++;
+                if(n/m==2){
+                    break;
+                }
+            }
+        }
+        alert("so nam cha lon hon gap doi tuoi con " +count);
+</script>
+</body>
+</html>

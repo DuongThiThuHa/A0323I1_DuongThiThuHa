@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm chuẩn hóa xâu ký tự</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap vao van ban :");
+    alert("Van ban ban dau : " + str);
+
+    function check(str) {
+        let array = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] !== " ") {
+                if (str[i - 1] === " " || i === 0) {
+                    array += str[i].toUpperCase();
+                } else {
+                    array += str[i].toLowerCase();
+                }
+            } else {
+                if (str[i + 1] !== " ") {
+                    array += str[i];
+                }
+            }
+        }
+        return array;
+    }
+
+    let newString = check(str)
+    alert("Van ban sau khi sua : " + newString);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+
+    let arr = [];
+    let max = 0;
+    let dem = 0;
+    let  sum = 0;
+    let trungBinh;
+    for (let i = 0; i <= 5; i++) {
+        arr[i] = +prompt("Nhập vào: ");
+        if (arr[i] >= max) {
+            max = arr[i];
+            dem = i;
+        }
+        sum += arr[i];
+        trungBinh = sum / arr.length;
+    }
+    alert("So Lon Nhat Trong Mang La : " + max);
+    alert(trungBinh);
+
+</script>
+</body>
+</html>

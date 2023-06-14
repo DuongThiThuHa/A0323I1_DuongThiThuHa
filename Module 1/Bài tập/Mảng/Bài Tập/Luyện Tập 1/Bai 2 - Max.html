@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let max = 0;
+    let min = 0;
+    let dem = 0;
+    let dem1 = 0;
+    for (let i = 0; i < 10; i++) {
+        arr[i] =+ prompt("Nhap vao: ");
+        if (arr[i] <= max) {
+            max = arr[i];
+            dem = i;
+        } else {
+            min = arr[i];
+            dem1 = i;
+        }
+    }
+    document.write("Day So Vua Nhap La : " + arr + "<br>");
+    document.write("So Lon Nhat Trong Mang La : " + max + " Va Nam Tai Vi Tri La :" + dem+"<br>");
+    document.write("So Nho Nhat Trong Mang La : " + min + " Va Nam Tai Vi Tri La :" + dem1);
+
+</script>
+</body>
+</html>

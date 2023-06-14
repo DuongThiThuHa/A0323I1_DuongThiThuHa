@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dếm số lượng kí tự khác nhau</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap vao 1 chuoi ky tu : ");
+    let strArr = [];
+    for (let i = 0; i < str.length; i++) {
+        strArr[i] = str.slice(i, i + 1);
+    }
+    alert(strArr);
+    strArr.sort();
+    for (let j = strArr.length - 1; j >= 0; j--) {
+        if (strArr[j] === strArr[j - 1]) {
+            strArr.splice(j, 1);
+        }
+    }
+    alert("So ky tu trong chuoi: " + strArr.length);
+    alert("So ki tu khac nhau trong chuoi: " + strArr);
+</script>
+</body>
+</html>

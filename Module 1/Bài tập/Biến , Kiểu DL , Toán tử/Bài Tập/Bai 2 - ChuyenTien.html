@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi</title>
+</head>
+<body>
+<style>
+    td {
+        width: 150px;
+    }
+
+    button {
+        margin-left: 30px;
+        background: #0772e2;
+    }
+
+    select {
+        width: 150px;
+    }
+
+</style>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td>
+            <input id="input">
+        </td>
+        <td>
+            <select>
+                <option value="vietnam">Viet Nam</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option value="my">My</option>
+            </select>
+
+        </td>
+        <td>
+            <button onclick="currency_exchange()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="result">Result :</td>
+    </tr>
+</table>
+
+<script>
+    function currency_exchange() {
+        let money = document.getElementById("input").value;
+        let result = money / 23000;
+        document.getElementById("result").innerText = result + " USD ";
+    }
+</script>
+</body>
+</html>

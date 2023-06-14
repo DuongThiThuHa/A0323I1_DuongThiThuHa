@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+
+<body>
+<input type="string" id="id" placeholder="Ma Dien Thoai">
+<input type="string" id="name" placeholder="Ten Dien Thoai">
+<input type="string" id="phoneName" placeholder="Hang Dien Thoai ">
+<input type="number" id="price" placeholder="Gia Ban">
+<button id="btn-add" onclick="addPhone()">Them Moi</button>
+<p id="result"></p>
+
+<script>
+    class Phones {
+        constructor(id, name, phoneName, price) {
+            this.id=id;
+            this.name=name;
+            this.phoneName=phoneName;
+            this.price=price;
+        }
+
+        setId(id) {
+            this.id=id;
+        }
+
+        setName(name) {
+            this.name=name;
+        }
+
+        setPhoneName(phoneName) {
+            this.phoneName=phoneName;
+        }
+
+        setPrice(price) {
+            this.price=price;
+        }
+
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPhoneName() {
+            return this.phoneName;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+    }
+
+    let phoneList=[];
+    let phone1=new Phones("DT-0001", "Iphone 12", "Iphone", "13.000.000");
+    let phone2=new Phones("DT-0002", "Samsung A53", "SamSung", "9.000.000");
+    let phone3=new Phones("DT-0003", "Oppo Reno 7", "Oppo", "6.000.000");
+
+    phoneList.push(phone1, phone2, phone3);
+    display(phoneList);
+
+    let updateIndex=-1;
+
+    function addPhone() {
+        let id=document.getElementById("id").value;
+        let name=document.getElementById("name").value;
+        let phoneName=document.getElementById("phoneName").value;
+        let price=document.getElementById("price").value;
+
+        let newPhone=new Phones(id, name, phoneName, price);
+        phoneList.push(newPhone);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("phoneName").value="";
+        document.getElementById("price").value="";
+        display(phoneList);
+    }
+
+    function deletePhone(index) {
+        let conf=confirm("Ban co muon xoa chiec dien thoai : " + phoneList[index].getName() + "?");
+        if (conf) {
+            phoneList.splice(index, 1);
+        }
+        display(phoneList);
+    }
+
+    function display(list) {
+        let tableString='<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>STT</th>\n' +
+            '       <th>Ma Dien Thoai</th>\n' +
+            '       <th>Ten Dien Thoai</th>\n' +
+            '       <th>Hang San Xuat</th>\n' +
+            '       <th>Don Gia</th>\n' +
+            '       <th>Xoa</th>\n' +
+            '   </tr>';
+        for (let i=0; i < list.length; i++) {
+            tableString+='<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getPhoneName() + '</td>\n' +
+                '        <td>' + list[i].getPrice() + '</td>\n' +
+                '        <td><button onclick="deletePhone(' + i + ')">Xoa</button></td>\n' +
+                '    </tr>'
+        }
+        tableString+='</table>'
+        document.getElementById("result").innerHTML=tableString;
+    }
+
+    function showInfoEdit(index) {
+        updateIndex=index;
+        document.getElementById("id").value=phoneList[index].getId();
+        document.getElementById("name").value=phoneList[index].getName();
+        document.getElementById("phoneName").value=phoneList[index].getPhoneName();
+        document.getElementById("price").value=phoneList[index].getPrice();
+        document.getElementById("btn-add").style.display="none";
+        document.getElementById("btn-edit").style.display="inline";
+    }
+
+</script>
+</body>
+</html>

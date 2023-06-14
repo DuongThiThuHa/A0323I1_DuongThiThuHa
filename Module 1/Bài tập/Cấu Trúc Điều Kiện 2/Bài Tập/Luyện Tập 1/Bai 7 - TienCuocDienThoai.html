@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhap vao thoi gian su dung dien thoai: (don vi : phut)"));
+    let b = 25.000;
+    let c ; //Tien cuoc phai tra (Don vi : dong)
+    if (a <= 50){
+        c = a * b * 600;
+    }else if (a <=150){
+        c = a * b * 400;
+    }else {
+        c = a * b * 200;
+    }
+    alert("So tien ban phai tra la : " +c + " (Don vi : dong)");
+</script>
+</body>
+</html>

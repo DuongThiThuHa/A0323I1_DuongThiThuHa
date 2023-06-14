@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let str=prompt("Nhap vao van ban :");
+    let arr=[];
+
+    for (let i=0; i < str.length; i++) {
+        if (str[i] >= "A" && str[i] <= "Z") {
+            arr.push(str[i]);
+        }
+    }
+    if (arr.length != 0) {
+        alert("So ki tu in hoa la : " + arr.length);
+    } else {
+        alert("The String is not contain upper char ");
+    }
+</script>
+</body>
+</html>

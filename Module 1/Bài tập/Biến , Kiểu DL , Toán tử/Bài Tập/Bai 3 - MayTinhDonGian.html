@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="input1">
+        </td>
+        <td>
+            <input id="input2">
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <button onclick="add()">Addition(+)</button>
+        </td>
+        <td>
+            <button onclick="sub()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button onclick="mul()">Multiplication(*)</button>
+        </td>
+        <td>
+            <button onclick="div()">Divsion(/)</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <input id="result" placeholder="Ket qua">
+        </td>
+    </tr>
+</table>
+<script>
+    function add() {
+        let a = document.getElementById("input1").value.trim();
+        let b = document.getElementById("input2").value.trim();
+        let cong = parseInt(a) + parseInt(b);
+        document.getElementById("result").value = cong;
+    }
+
+    function sub() {
+        let a = document.getElementById("input1").value.trim();
+        let b = document.getElementById("input2").value.trim();
+        let tru = parseInt(a) - parseInt(b);
+        document.getElementById("result").value = tru;
+    }
+
+    function mul() {
+        let a = document.getElementById("input1").value.trim();
+        let b = document.getElementById("input2").value.trim();
+        let nhan = parseInt(a) * parseInt(b);
+        document.getElementById("result").value = nhan;
+    }
+
+    function div() {
+        let a = document.getElementById("input1").value.trim();
+        let b = document.getElementById("input2").value.trim();
+        let chia = parseInt(a) / parseInt(b);
+        document.getElementById("result").value = chia;
+    }
+</script>
+</body>
+</html>

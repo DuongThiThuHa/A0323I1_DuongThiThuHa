@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let array1 = [];
+    let n = +prompt("Nhap vao so luong phan tu : ");
+
+    function daoMang() {
+        for (let i = 0; i < n; i++) {
+            array[i] = +prompt("Nhap vao 1 day so nguyen bat ky : ");
+            if (array[i] > 0){
+                array1 = [...array].reverse();
+            }else {
+                alert("Mang co gia tri am ");
+            }
+        }
+    }
+    daoMang();
+    alert(array1);
+</script>
+</body>
+</html>

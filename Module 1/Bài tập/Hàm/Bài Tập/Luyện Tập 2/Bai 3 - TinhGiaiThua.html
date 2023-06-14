@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhap vao 1 so bat ky : ")
+
+    function factorial(n) {
+        if (n === 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+    alert(factorial(n));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tong Mang</title>
+</head>
+<body>
+<script>
+    let n =+ prompt("Nhap vao so phan tu trong mang ");
+    let arr = [];
+    let sum = 0;
+    function ArraySum()
+    {
+        for (let i = 0; i < n; i++) {
+            arr[i] =+ prompt("nhap vao cac phan tu trong mang ");
+            sum += arr[i];
+        }
+        return sum;
+    }
+    ArraySum ();
+    alert("Tong mang la : " + sum);
+</script>
+</body>
+</html>

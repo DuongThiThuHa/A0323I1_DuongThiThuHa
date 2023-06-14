@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng các số chẵn </title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhap vao so dong hoac cot : "));
+    let arr = new Array(num);
+    for (let i = 0; i < num; i++) {
+        arr[i] = new Array(num);
+    }
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++) {
+            arr[i][j] = parseInt(prompt(`Nhap vao gia tri tai vi tri : (${i + 1},${j + 1}): `));
+        }
+    }
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 === 0) {
+                sum += arr[i][j]
+            }
+        }
+    }
+    alert("Tong cac so chan trong ma tran:  " + sum);
+</script>
+</body>
+</html>

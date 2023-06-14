@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi</title>
+</head>
+<body>
+<style>
+    td {
+        width: 150px;
+    }
+
+    button {
+        margin-left: 30px;
+        background: #7db7f0;
+    }
+
+    select {
+        width: 150px;
+    }
+
+</style>
+<table>
+    <tr>
+        <td></td>
+        <td>Chon tien</td>
+        <td>Doi tien</td>
+    </tr>
+    <tr>
+        <td>
+            <input id="input" placeholder="Nhap tien muon doi">
+        </td>
+        <td>
+            <select>
+                <option value="vietnam">Viet Nam</option>
+                <option value="pound">Vung Quoc Anh</option>
+                <option value="yen">Nhat Ban</option>
+                <option value="te">Trunng Quoc</option>
+                <option value="my">My</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option value="vietnam">Viet Nam</option>
+                <option value="pound">Vung Quoc Anh</option>
+                <option value="yen">Nhat Ban</option>
+                <option value="te">Trunng Quoc</option>
+                <option value="my">My</option>
+            </select>
+
+        </td>
+        <td>
+            <button onclick="currency_exchange()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="result">Result :</td>
+    </tr>
+</table>
+
+<script>
+    function currency_exchange() {
+        let money = document.getElementById("input").value;
+        let result = money / 23000;
+        document.getElementById("result").innerText = result + " USD ";
+    }
+    function currency_exchange() {
+        let money = document.getElementById("input").value;
+        let result = money / 174.86;
+        document.getElementById("result").innerText = result + " JPY ";
+    }
+    function currency_exchange() {
+        let money = document.getElementById("input").value;
+        let result = money / 3417.88;
+        document.getElementById("result").innerText = result + " RMB ";
+    }
+    function currency_exchange() {
+        let money = document.getElementById("input").value;
+        let result = money / 29150;
+        document.getElementById("result").innerText = result + " GBP ";
+    }
+
+</script>
+</body>
+</html>

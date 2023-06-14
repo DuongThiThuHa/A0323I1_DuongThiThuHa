@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<script>
+    let scores = parseFloat(prompt("Nhap vao diem kiem tra : "));
+    let midtermExam  = parseFloat(prompt("Nhap vao diem kiem thi giua ki : "));
+    let finalExam = parseFloat(prompt("Nhap vao diem kiem thi cuoi ki : "));
+    if (scores >= 8.0 && midtermExam >= 8.0 && finalExam >= 8.0 ){
+        alert("Hoc luc gioi");
+    }else if (scores >= 6.5 && midtermExam >= 6.5 && finalExam >= 6.5) {
+        alert("Hoc luc kha");
+    }else if (scores >= 5.0 && midtermExam >= 5.0 && finalExam >= 5.0){
+        alert("Hoc luc kha");
+    }else {
+        alert("Hoc luc yeu")
+    }
+</script>
+</body>
+</html>
