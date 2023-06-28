@@ -4,109 +4,157 @@ import java.util.Scanner;
 
 public class DocSoThanhChu {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int num;
+        System.out.print("Nhap vao 1 so nguyen khong am de doc: ");
+        num = sc.nextInt();
 
-        System.out.println("Nhap vao 1 so bat ky : ");
-        int number1 = scanner.nextInt();
-        int number2 = scanner.nextInt();
-        int number3 = scanner.nextInt();
+        String so = "";
+        int one = num % 10;
+        int ten = (num / 10) % 10;
+        int hundred = (num / 100) % 10;
+        int thousand = (num / 1000) % 10;
 
-        if(number1 <= 10){
-            switch (number1){
-                case 0 :
-                    System.out.println("Zero");
-                    break;
-                case 1:
-                    System.out.println("One");
-                    break;
-                case 2:
-                    System.out.println("Two");
-                    break;
-                case 3 :
-                    System.out.println("Three");
-                    break;
-                case 4:
-                    System.out.println("Four");
-                    break;
-                case 5:
-                    System.out.println("Five");
-                    break;
-                case 6:
-                    System.out.println("Six");
-                    break;
-                case 7:
-                    System.out.println("Seven");
-                    break;
-                case 8:
-                    System.out.println("Eight");
-                    break;
-                case 9:
-                    System.out.println("Nine");
-                    break;
-                case 10:
-                    System.out.println("Ten");
-                    break;
-            }
-        } else if ( number2 < 20){
-            switch (number2){
-                case 0 :
-                    System.out.println("Eleven");
-                    break;
-                case 1:
-                    System.out.println("Twelve");
-                    break;
-                case 2:
-                    System.out.println("Thirteen");
-                    break;
-                case 3 :
-                    System.out.println("Fourteen");
-                    break;
-                case 4:
-                    System.out.println("Fifteen");
-                    break;
-                case 5:
-                    System.out.println("Sixteen");
-                    break;
-                case 6:
-                    System.out.println("Seventeen");
-                    break;
-                case 7:
-                    System.out.println("Eighteen");
-                    break;
-                case 8:
-                    System.out.println("Nineteen");
-                    break;
-            }
-        } else if (number3 < 100){
-            switch (number3){
-                case 1:
-                    System.out.print("Twenty");
-                    break;
-                case 2:
-                    System.out.print("thirty");
-                    break;
-                case 3:
-                    System.out.print("forty");
-                    break;
-                case 4:
-                    System.out.print("fifty");
-                    break;
-                case 5:
-                    System.out.print("Sixty");
-                    break;
-                case 6:
-                    System.out.print("Seventy");
-                    break;
-                case 7:
-                    System.out.print("eighty");
-                    break;
-                case 8:
-                    System.out.print("Ninety");
-                    break;
-                case 9:
-                    System.out.print("One hundred ");
-                    break;
-            }
+        switch (thousand) {
+            case 1:
+                so += "One Thousand";
+                break;
+            case 2:
+                so += "Two Thousand";
+                break;
+            case 3:
+                so += "Three Thousand";
+                break;
+            case 4:
+                so += "Four Thousand";
+                break;
+            case 5:
+                so += "Five Thousand";
+                break;
+            case 6:
+                so += "Six Thousand";
+                break;
+            case 7:
+                so += "Seven Thousand";
+                break;
+            case 8:
+                so += "Eight Thousand";
+                break;
+            case 9:
+                so += "Nine Thousand";
+                break;
+            default:
+                break;
         }
+
+        switch (hundred) {
+            case 1:
+                so += "One Hundred";
+                break;
+            case 2:
+                so += "Two Hundred";
+                break;
+            case 3:
+                so += "Three Hundred";
+                break;
+            case 4:
+                so += "Four Hundred";
+                break;
+            case 5:
+                so += "Five Hundred";
+                break;
+            case 6:
+                so += "Six Hundred";
+                break;
+            case 7:
+                so += "Seven Hundred";
+                break;
+            case 8:
+                so += "Eight Hundred";
+                break;
+            case 9:
+                so += "Nine Hundred";
+                break;
+
+            default:
+                break;
+        }
+
+        switch (ten) {
+            case 1:
+                so += "Eleven";
+                break;
+            case 2:
+                so += "Twelve";
+                break;
+            case 3:
+                so += "Thirteen";
+                break;
+            case 4:
+                so += "Fourteen";
+                break;
+            case 5:
+                so += "Fiveteen";
+                break;
+            case 6:
+                so += "Sixteen";
+                break;
+            case 7:
+                so += "Seventeen";
+                break;
+            case 8:
+                so += "Eighteen";
+                break;
+            case 9:
+                so += "Nineteen";
+                break;
+
+            default:
+                break;
+        }
+
+        switch (one) {
+            case 0:
+                if (num == 0) {
+                    so += "Zero";
+                    break;
+                }
+                break;
+            case 1:
+                if (ten == 0) {
+                    so += "One";
+                } else {
+                    so += "Two";
+                }
+                break;
+            case 3:
+                so += "Three";
+                break;
+            case 4:
+                so += "Four";
+                break;
+            case 5:
+                so += "Five";
+                break;
+            case 6:
+                so += "Six";
+                break;
+            case 7:
+                so += "Seven";
+                break;
+            case 8:
+                so += "Eight";
+                break;
+            case 9:
+                so += "Nine";
+                break;
+            case 10:
+                so += "Ten";
+                break;
+            default:
+                break;
+        }
+        System.out.println("Số " + num + " được đọc là: " + so);
     }
 }
+
