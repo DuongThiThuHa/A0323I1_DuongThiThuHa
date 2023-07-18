@@ -12,6 +12,9 @@ public class Student {
         this.classes = className;
     }
 
+    public Student(int i, String haiTT, String s) {
+    }
+
     public String getName() {
         return name;
     }
