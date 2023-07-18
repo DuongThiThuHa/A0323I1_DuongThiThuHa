@@ -3,7 +3,7 @@ package ss10_Stack_Queue.baitap.Queue;
 public class Queue<C> {
     public Node front;
     public Node rear;
-    Queue(){
+    public Queue(){
         this.front = null;
         this.rear = null;
     }

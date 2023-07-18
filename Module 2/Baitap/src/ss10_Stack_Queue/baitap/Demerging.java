@@ -1,39 +1,87 @@
 package ss10_Stack_Queue.baitap;
 
-import ss10_Stack_Queue.baitap.Queue.Queue;
-
 import java.util.LinkedList;
-import java.util.Scanner;
-import java.util.Stack;
-
 
 public class Demerging {
+    private int code;
+    private String name;
+    private String dateOfBirth;
+    private String gender;
+
+    public Demerging(int code, String name, String dateOfBirth, String gender) {
+        this.code = code;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<>();
-        Queue<String> queue = new LinkedList<>();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap chuoi vao:");
-        String n = sc.nextLine();
-        String arr[] = n.split("");
-        boolean check = true;
-        for (int i = 0; i < arr.length; i++) {
-            stack.push(arr[i]);
-            queue.offer(arr[i]);
+        LinkedList<Demerging> Nu = new LinkedList<>();
+        LinkedList<Demerging> Nam = new LinkedList<>();
+
+        Demerging demerging1 = new Demerging(1, "TH", "24/12", "Nu");
+        Demerging demerging2 = new Demerging(2, "DH", "18/10", "Nu");
+        Demerging demerging3 = new Demerging(3, "MH", "12/10", "Nam");
+        Demerging demerging4 = new Demerging(4, "AQ", "13/05", "Nam");
+
+        Nu.add(demerging1);
+        Nu.add(demerging2);
+        Nam.add(demerging3);
+        Nam.add(demerging4);
+
+        System.out.println("Số bản ghi trong hàng đợi Nữ: " + Nu.size());
+        System.out.println("Số bản ghi trong hàng đợi Nam: " + Nam.size());
+
+        System.out.println("Hàng đợi Nữ: ");
+        while (!Nu.isEmpty()) {
+            Demerging demerging = Nu.poll();
+            System.out.println(demerging.getCode());
+            System.out.println(demerging.getName());
+            System.out.println(demerging.getDateOfBirth());
+            System.out.println(demerging.getGender());
+            System.out.println("------------");
         }
-        for (int i = 0; i < arr.length; i++) {
-            String s1 = stack.pop();
-            String s2 = queue.poll();
-            if (!s1.equalsIgnoreCase(s2)) {
-                check = false;
-                break;
-            } else {
-                check = true;
-            }
-        }
-        if (check) {
-            System.out.println("true");
-        } else {
-            System.out.println("False");
+
+        System.out.println("Hàng đợi Nam:");
+        while (!Nam.isEmpty()) {
+            Demerging demerging = Nam.poll();
+            System.out.println(demerging.getCode());
+            System.out.println(demerging.getName());
+            System.out.println(demerging.getDateOfBirth());
+            System.out.println(demerging.getGender());
+            System.out.println("------------");
         }
 
     }
