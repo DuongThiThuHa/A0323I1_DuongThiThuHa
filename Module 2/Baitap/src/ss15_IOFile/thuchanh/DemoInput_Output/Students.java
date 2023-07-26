@@ -1,18 +1,17 @@
-package ss11_JavaCollectionFramework.thuchanh.HashMap_HashSet;
+package ss15_IOFile.thuchanh.DemoInput_Output;
 
-public class Student {
+public class Students {
     private int code;
     private String name;
     private int age;
+    private String dateOfBirth;
     private String address;
 
-    public Student() {
-    }
-
-    public Student(int code, String name, int age, String address) {
+    public Students(int code, String name, int age, String dateOfBirth, String address) {
         this.code = code;
         this.name = name;
         this.age = age;
+        this.dateOfBirth = dateOfBirth;
         this.address = address;
     }
 
@@ -40,21 +39,19 @@ public class Student {
         this.age = age;
     }
 
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
     public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Students{" +
-                "code=" + code +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
-                '}';
     }
 }

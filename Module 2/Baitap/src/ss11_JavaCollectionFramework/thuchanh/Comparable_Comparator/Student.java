@@ -50,7 +50,7 @@ public class Student implements Comparable <Student>{
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Students{" +
                 "code=" + code +
                 ", name='" + name + '\'' +
                 ", age=" + age +
