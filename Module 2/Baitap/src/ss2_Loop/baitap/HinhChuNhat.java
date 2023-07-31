@@ -14,7 +14,7 @@ public class HinhChuNhat {
             for (int j = 1; j <= width; j++) {
                 System.out.println("x");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

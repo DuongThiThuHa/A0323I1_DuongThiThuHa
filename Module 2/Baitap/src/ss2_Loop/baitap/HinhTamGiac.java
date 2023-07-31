@@ -11,7 +11,7 @@ public class HinhTamGiac {
             for (int j = 0; j <= i ; j++) {
                 System.out.println("x");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

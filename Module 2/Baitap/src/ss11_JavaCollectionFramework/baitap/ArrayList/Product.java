@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Product {
-    private int code;
+    private final int code;
     private String productName;
     private double price;
 
@@ -44,7 +44,7 @@ public class Product {
 }
 
 class ProductManagement {
-    private static ArrayList<Product> productList = new ArrayList<>();
+    private static final ArrayList<Product> productList = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

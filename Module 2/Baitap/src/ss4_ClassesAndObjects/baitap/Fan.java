@@ -89,7 +89,7 @@ public class Fan {
         fan2.setRadius(5);
         fan2.setColor("Blue");
 
-        System.out.println(fan1.toString());
-        System.out.println(fan2.toString());
+        System.out.println(fan1);
+        System.out.println(fan2);
     }
 }

@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 import java.util.LinkedList;
 
 public class MyGenericStack<T> {
-    private LinkedList<T> stack;
+    private final LinkedList<T> stack;
 
     public MyGenericStack() {
         stack = new LinkedList<>();
@@ -26,9 +26,6 @@ public class MyGenericStack<T> {
     }
 
     public boolean isEmpty() {
-        if (stack.size() == 0) {
-            return true;
-        }
-        return false;
+        return stack.size() == 0;
     }
 }

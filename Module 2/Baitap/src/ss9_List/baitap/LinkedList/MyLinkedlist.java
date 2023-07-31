@@ -3,7 +3,7 @@ package ss9_List.baitap.LinkedList;
 public class MyLinkedlist<E> {
     private class Node {
         private Node next;
-        private Object data;
+        private final Object data;
 
         public Node(Object data) {
             this.data = data;

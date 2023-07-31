@@ -2,8 +2,8 @@ package ss5_AccessModifier_StaticMethod_StaticProperty.thuchanh;
 
 public class StaticMethod {
     // phuong thuc tinh chenge()
-    private int rollno;
-    private String name;
+    private final int rollno;
+    private final String name;
     private static String college = "BBDIT";
 
     StaticMethod(int r , String n){

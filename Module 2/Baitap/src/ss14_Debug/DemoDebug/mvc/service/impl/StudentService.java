@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StudentService implements IStudentService {
-    private Scanner scanner= new Scanner(System.in);
-    private static IStudentRepository iStudentRepository = new StudentRepository();
+    private final Scanner scanner= new Scanner(System.in);
+    private static final IStudentRepository iStudentRepository = new StudentRepository();
     @Override
     public void addStudent() {
         Student student = inputInfo();

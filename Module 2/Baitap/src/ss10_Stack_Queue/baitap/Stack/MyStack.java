@@ -42,17 +42,11 @@ public class MyStack {
     }
 
     public boolean isFull(){
-        if (index == size){
-            return true;
-        }
-        return false;
+        return index == size;
     }
 
     public boolean isEmpty(){
-        if (index == 0){
-            return true;
-        }
-        return false;
+        return index == 0;
     }
 
     public void push(int element){

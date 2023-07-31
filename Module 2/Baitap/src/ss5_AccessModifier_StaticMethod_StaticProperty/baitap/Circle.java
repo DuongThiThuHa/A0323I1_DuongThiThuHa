@@ -4,13 +4,13 @@ import ss7_AbstractClass_Interface.ComparableCircle;
 
 public abstract class Circle {
     private static double radius = 1.0;
-    private String color = "Red";
+    private final String color = "Red";
 
     public Circle(double radius, String color, boolean filled) {
     }
 
     public Circle(double radius) {
-        this.radius = this.radius;
+        Circle.radius = Circle.radius;
     }
 
     public Circle() {
@@ -25,7 +25,7 @@ public abstract class Circle {
 
     public void setRadius(double radius) {
 
-        this.radius = radius;
+        Circle.radius = radius;
     }
 
     public double getArea() {

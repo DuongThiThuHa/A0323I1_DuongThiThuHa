@@ -1,8 +1,8 @@
 package ss10_Stack_Queue.baitap;
 
 public class MyQueue {
-    private int capacity;
-    private int queueArr[];
+    private final int capacity;
+    private final int[] queueArr;
     private int head;
     private int tail = -1;
     private int currentSize = 0;
@@ -13,18 +13,12 @@ public class MyQueue {
     }
 
     public boolean isQueueFull(){
-        boolean status = false;
-        if (currentSize == capacity){
-            status = true;
-        }
+        boolean status = currentSize == capacity;
         return status;
     }
 
     public boolean isQueueEmpty(){
-        boolean status = false;
-        if (currentSize  == 0){
-            status = true;
-        }
+        boolean status = currentSize == 0;
         return status;
     }
 

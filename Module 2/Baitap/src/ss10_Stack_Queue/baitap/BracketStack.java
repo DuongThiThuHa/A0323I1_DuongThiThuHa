@@ -39,10 +39,6 @@ public class BracketStack {
                 }
             }
         }
-        if (stack1.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
+        return stack1.isEmpty();
     }
 }

@@ -6,8 +6,8 @@ import ss14_Debug.DemoDebug.mvc.service.impl.StudentService;
 import java.util.Scanner;
 
 public class StudentController {
-    private static IStudentService iStudentService = new StudentService();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final IStudentService iStudentService = new StudentService();
+    private static final Scanner scanner = new Scanner(System.in);
     public static void menu() {
         while (true) {
             System.out.println("1. Thêm mới");

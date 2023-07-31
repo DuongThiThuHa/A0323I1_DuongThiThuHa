@@ -97,13 +97,13 @@ class Main {
         Point2D point2D = new Point2D(3, 5);
         System.out.println(point2D.getX());
         System.out.println(point2D.getY());
-        System.out.println(point2D.toString());
+        System.out.println(point2D);
 
         Point3D point3D = new Point3D(2, 4, 1);
         System.out.println(point3D.getX());
         System.out.println(point3D.getY());
         System.out.println(point3D.getZ());
-        System.out.println(point3D.toString());
+        System.out.println(point3D);
     }
 }
 

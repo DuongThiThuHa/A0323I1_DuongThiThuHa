@@ -33,7 +33,7 @@ public class circleComparatorTest {
             System.out.println(circle);
         }
 
-        Comparator circleComparator = (Comparator) new circleComparator();
+        Comparator circleComparator = new circleComparator();
         Arrays.sort(circles, circleComparator);
 
         System.out.println("After-sorted:");

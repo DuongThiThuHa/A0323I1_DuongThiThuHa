@@ -3,9 +3,9 @@ package ss4_ClassesAndObjects.baitap;
 import java.util.Scanner;
 
 public class PhuongTrinhBacHai {
-    private double a;
-    private double b;
-    private double c;
+    private final double a;
+    private final double b;
+    private final double c;
 
     public PhuongTrinhBacHai(double a, double b, double c) {
         this.a = a;
