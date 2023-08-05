@@ -56,38 +56,38 @@ public class ReadWriteFile {
 
     public static void main(String[] args) {
         File file = new File("src/ss16/mvc/data/test.txt");
-        FileWriter fileWriter = null;
-        try {
-            fileWriter = new FileWriter(file, true);
-            fileWriter.write("A0723I1");
-        } catch (IOException e) {
-            System.out.println("Lỗi ghi file");
-        } finally {
-            try {
-                fileWriter.close();
-            } catch (IOException e) {
-                System.out.println("Lỗi đóng file");
-            }
-        }
-
-
-//       FileReader fileReader = null;
+//        FileWriter fileWriter = null;
 //        try {
-//            fileReader = new FileReader(file);
-//            int temp;
-//            while ((temp = fileReader.read()) != -1) {
-//                System.out.println((char) temp);
-//            }
-//        } catch (FileNotFoundException e) {
-//            System.out.println("File không tồn tại");
+//            fileWriter = new FileWriter(file, true);
+//            fileWriter.write("A0723I1");
 //        } catch (IOException e) {
-//            System.out.println("Lỗi đọc dữ liệu");
+//            System.out.println("Lỗi ghi file");
 //        } finally {
 //            try {
-//                fileReader.close();
+//                fileWriter.close();
 //            } catch (IOException e) {
 //                System.out.println("Lỗi đóng file");
 //            }
 //        }
+
+
+       FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(file);
+            int temp;
+            while ((temp = fileReader.read()) != -1) {
+                System.out.println((char) temp);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File không tồn tại");
+        } catch (IOException e) {
+            System.out.println("Lỗi đọc dữ liệu");
+        } finally {
+            try {
+                fileReader.close();
+            } catch (IOException e) {
+                System.out.println("Lỗi đóng file");
+            }
+        }
     }
 }

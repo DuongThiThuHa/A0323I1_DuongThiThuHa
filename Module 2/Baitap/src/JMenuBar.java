@@ -14,8 +14,8 @@ public class JMenuBar {
         //jMenu_BM.add(jMenuItem_BM_display);
 
 
-        //Menu 1 : Employee Management
-        JMenu jMenu_EM = new JMenu("1.\tEmployee Management");
+        //Menu 1 : EmployeeService Management
+        JMenu jMenu_EM = new JMenu("1.\tEmployeeService Management");
         JMenuItem jMenuItem_EM_display = new JMenuItem("1.Display list employees");
         jMenu_EM.add(jMenuItem_EM_display);
         JMenuItem jMenuItem_EM_add = new JMenuItem("2.Add list employees");

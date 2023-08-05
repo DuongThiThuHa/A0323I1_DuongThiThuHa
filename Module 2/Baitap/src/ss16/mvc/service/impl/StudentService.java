@@ -1,6 +1,5 @@
 package ss16.mvc.service.impl;
 
-
 import ss16.mvc.model.Student;
 import ss16.mvc.repository.IStudentRepository;
 import ss16.mvc.repository.impl.StudentRepository;
@@ -12,6 +11,19 @@ import java.util.Scanner;
 public class StudentService implements IStudentService {
     private Scanner scanner = new Scanner(System.in);
     private static IStudentRepository iStudentRepository = new StudentRepository();
+
+    public Student inputInfo() {
+        Student student = new Student();
+        System.out.print("Nhập mã: ");
+        student.setCode(Integer.parseInt(scanner.nextLine()));
+        System.out.print("Nhập tên: ");
+        student.setName(scanner.nextLine());
+        System.out.print("Nhập ngày sinh: ");
+        student.setDateOfBirth(scanner.nextLine());
+        System.out.print("Nhập điểm: ");
+        student.setGrade(Double.parseDouble(scanner.nextLine()));
+        return student;
+    }
 
     @Override
     public void addStudent() {
@@ -25,18 +37,19 @@ public class StudentService implements IStudentService {
     public void searchStudent() {
         List<Student> studentList = iStudentRepository.getAll();
         System.out.println("Nhập mã cần tìm kiếm : ");
+        boolean flag = false;
         int id = Integer.parseInt(scanner.nextLine());
         for (Student student : studentList) {
-            while (id == student.getCode()) {
-                System.out.println("Đã tìm thấy thông tin theo mã !");
-                System.out.println("Ma : " + student.getCode() + " , Tên: " + student.getName() + " , Ngày sinh : " + student.getDateOfBirth() + " , Điểm : " + student.getGrade());
-                break;
-            }
-            while (id != student.getCode()){
-                System.out.println("Không tìm thấy mã !");
+            if (id == student.getCode()) {
+                flag = true;
+                System.out.println("Đã tìm thấy thông tin ");
+                System.out.println("Mã : " + student.getCode() + " , Tên : " + student.getName() + " , Ngày sinh : " + student.getDateOfBirth() + " , Điểm : " + student.getGrade());
                 break;
             }
         }
+       if( flag == false){
+           System.out.println("Không tìm thấy mã "+ id);
+       }
     }
 
     @Override
@@ -56,16 +69,4 @@ public class StudentService implements IStudentService {
 
     }
 
-    public Student inputInfo() {
-        Student student = new Student();
-        System.out.print("Nhập mã: ");
-        student.setCode(Integer.parseInt(scanner.nextLine()));
-        System.out.print("Nhập tên: ");
-        student.setName(scanner.nextLine());
-        System.out.print("Nhập ngày sinh: ");
-        student.setDateOfBirth(scanner.nextLine());
-        System.out.print("Nhập điểm: ");
-        student.setGrade(Double.parseDouble(scanner.nextLine()));
-        return student;
-    }
 }

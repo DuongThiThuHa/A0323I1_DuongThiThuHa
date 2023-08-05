@@ -42,7 +42,6 @@ public class StudentRepository implements IStudentRepository {
     @Override
     public void add(Student student) {
         ReadWriteFile.writeFile(SRC_STUDENT, convertToString(student), true);
-
     }
 
     @Override
