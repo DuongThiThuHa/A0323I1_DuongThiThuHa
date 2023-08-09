@@ -16,27 +16,25 @@ public class StudentRepository implements IStudentRepository {
     @Override
     public void remove(int code) {
         List<Student> students = getAll();
-        for (Student student: students) {
-            if(student.getCode() == code) {
-                System.out.println("Bạn có muốn xóa student có code là: "+ code);
+        for (Student student : students) {
+            if (student.getCode() == code) {
+                System.out.println("Bạn có muốn xóa học sinh có mã là: " + code);
                 System.out.println("1. Đồng ý");
                 System.out.println("2. Hủy bỏ");
                 int choice = Integer.parseInt(new Scanner(System.in).nextLine());
-                if(choice == 1) {
-                    boolean remove = students.remove(student);
-                    String string = "";
-                    for(Student temp: students) {
-                        string+=convertToString(temp)+"\n";
+                if (choice == 1) {
+                    students.remove(student);
+                    String str = "";
+                    for (Student temp : students) {
+                        str += convertToString(temp) + "\n";
                     }
-                    string = string.substring(0, string.length()-3);
-                    ReadWriteFile.writeFile(SRC_STUDENT,string,false);
+                    str = str.substring(0, str.length() - 3);
+                    ReadWriteFile.writeFile(SRC_STUDENT, str, false);
                     System.out.println("Xóa thành công");
                 }
                 break;
             }
         }
-
-//        students.remove(student);
     }
 
     @Override
@@ -49,9 +47,9 @@ public class StudentRepository implements IStudentRepository {
         List<Student> students = new ArrayList<>();
         List<String> strings = ReadWriteFile.readFile(SRC_STUDENT);
         String[] temp;
-        for (String string : strings) {
-            temp = string.split(",");
-            
+        for (String str : strings) {
+            temp = str.split(",");
+
             students.add(new Student(Integer.parseInt(temp[0]), temp[1], temp[2], Double.parseDouble(temp[3])));
         }
         return students;

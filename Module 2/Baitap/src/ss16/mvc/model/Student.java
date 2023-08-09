@@ -3,11 +3,16 @@ package ss16.mvc.model;
 public class Student extends Person {
     private double grade;
 
-    public Student() {
+    public double getGrade() {
+        return grade;
     }
 
-    public Student(int code, String name, String dateOfBirth) {
-        super(code, name, dateOfBirth);
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+
+
+    public Student() {
     }
 
     public Student(double grade) {
@@ -19,16 +24,7 @@ public class Student extends Person {
         this.grade = grade;
     }
 
-    public double getGrade() {
-        return grade;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
-    }
-
-    @Override
     public String toString() {
-        return "Mã: " +super.getCode()+ " , Tên: "+super.getName()+ " , Ngày sinh: "+ super.getDateOfBirth()+  " , Điểm: " + grade ;
+        return "Mã: "+ super.getCode()+", Tên: "+super.getName()+" , Ngày sinh: "+ super.getDateOfBirth()+" , Điểm: "+getGrade();
     }
 }
