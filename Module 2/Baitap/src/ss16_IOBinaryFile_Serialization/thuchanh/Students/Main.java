@@ -13,8 +13,8 @@ public class Main {
         students.add(new Student(4, "Dương Văn D", "Quảng Nam"));
         students.add(new Student(5, "Dương Văn E", "Quảng Nam"));
 
-        writeToFile("src/ss16_IOBinaryFile_Serialization/thuchanh/Students/Student.csv", students);
-        List<Student> studentDataFromFile = readDataFromFile("src/ss16_IOBinaryFile_Serialization/thuchanh/Students/Student.csv");
+        writeToFile("src/ss16_IOBinaryFile_Serialization/thuchanh/Students/BenhThuong.csv", students);
+        List<Student> studentDataFromFile = readDataFromFile("src/ss16_IOBinaryFile_Serialization/thuchanh/Students/BenhThuong.csv");
         for (Student student : studentDataFromFile){
             System.out.println(student);
         }

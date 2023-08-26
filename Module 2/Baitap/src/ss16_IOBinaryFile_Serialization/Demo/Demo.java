@@ -6,11 +6,11 @@ import java.util.List;
 
 public class Demo {
     public static void main(String[] args) {
-//        List<Student> students = new ArrayList<>();
-//        students.add(new Student(1,"TH","24/12"));
-//        students.add(new Student(2,"TH","24/12"));
-//        students.add(new Student(3,"TH","24/12"));
-//        students.add(new Student(4,"TH","24/12"));
+//        List<BenhThuong> students = new ArrayList<>();
+//        students.add(new BenhThuong(1,"TH","24/12"));
+//        students.add(new BenhThuong(2,"TH","24/12"));
+//        students.add(new BenhThuong(3,"TH","24/12"));
+//        students.add(new BenhThuong(4,"TH","24/12"));
 //
 //      File file = new File("src/ss16_IOBinaryFile_Serialization/Demo/text.txt");
 //        FileOutputStream fileOutputStream = null;

@@ -42,7 +42,7 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return "Student {" +
+        return "BenhThuong {" +
                 "code=" + code +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
