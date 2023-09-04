@@ -1,0 +1,40 @@
+h1{
+    font-family: "Times New Roman";
+    text-align: center;
+    font-size: xx-large;
+}
+
+hr{
+    width: 15%;
+}
+.book{
+    display: flex;
+    height: 350px;
+    width: 250px;
+    margin: 25px;
+    flex-direction: column;
+}
+
+.book_store{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+img {
+    height: 90%;
+    display: block;
+    width: auto;
+    align-items: center;
+}
+
+a{
+    font-family: "Times New Roman";
+    font-size: 18px;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
