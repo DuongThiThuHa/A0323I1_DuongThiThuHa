@@ -8,87 +8,122 @@
 <style>
     header {
         font-family: "Times New Roman";
-        width: 28%;
-        height: 30px;
+        width: 100%;
+        height: 100%;
         padding: 0;
         margin: 0;
-        background-color: grey;
+        background-color: gray;
         border: 1px solid #CDCDCD;
     }
 
-    .header ul, .header li {
-        padding: 0;
+    ul {
+        list-style-type: none;
         margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
     }
 
-    .header li {
-        position: relative;
+    li {
+        /*
+                cac phan tu deu nam ngang
+        */
         float: left;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        margin: 20px;
     }
 
-    .header li a {
-        width: 100px;
+    img {
+        width: 30px;
         height: 30px;
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        line-height: 30px;
-        background-color: grey;
-        color: white;
+        margin-left: 900px;
+        text-align: right;
     }
 
-    .header ul ul li a {
-        width: 200px;
+    .body_left {
+        background: #CDCDCD;
+        width: 10%;
+        min-height: 600px;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .body_right {
+        background: #CDCDCD;
+        width: 10%;
+        min-height: 600px;
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width: 70%;
+        height: 50px;
+        margin: 20px;
+    }
+
+    .body_between {
+        color: black;
+        width: 80%;
+        min-height: 400px;
+        float: left;
         text-align: left;
-        padding-left: 10px;
+    }
+
+    footer {
+        font-family: "Times New Roman";
+        width: 100%;
+        height: 80px;
+        margin: 600px;
+        margin-left: 0;
+        background-color: gray;
+        border: 1px solid #CDCDCD;
+        text-align: center;
     }
 </style>
 
 
 <body>
-<div class="header">
-        <ul>
-            <li>Logo</li>
-            <li>Home</li>
-            <li>About</li>
-            <li>Project</li>
-            <li>Contact</li>
-        </ul>
+<ul>
+    <li>Logo</li>
+    <li>Home</li>
+    <li>About</li>
+    <li>Project</li>
+    <li>Contact</li>
+    <li><img src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/logout-1024.png"></li>
+    <li>Login</li>
+</ul>
+</header>
+
+<div class="body_left">
+    <span>Link</span>
+    <span>Link</span>
+    <span>Link</span>
+    <span>Link</span>
 </div>
 
-<div class="body">
-    <div class="body_left">
-        <span>Link</span>
-        <span>Link</span>
-        <span>Link</span>
-        <span>Link</span>
-    </div>
-
-    <div class="body_top">
-        <h2>Welcome</h2>
-        <p>Lorem ispum dolor sit amet, consectetur adipiscing elit, sed do eilusmod tempor incididunt ut labore et <br>
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco llaboris nisi ut aliquip ex
-            ea <br>
-            commodo consequat. Excepteur sintt occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br>
-            mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            <br>
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br>
-            commodo consequat. </p>
-    </div>
-
-    <div class="body_bottom">
-        <h1>Test</h1>
-        <span>lorem ipsum...</span>
-    </div>
-
-    <div>
-        <button>ADS</button>
-        <button>ADS</button>
-    </div>
+<div class="body_between">
+    <h2>Welcome</h2>
+    <p>Lorem ispum dolor sit amet, consectetur adipiscing elit, sed do eilusmod tempor incididunt ut labore et <br>
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco llaboris nisi ut aliquip ex
+        ea <br>
+        commodo consequat. Excepteur sintt occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br>
+        mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        <br>
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br>
+        commodo consequat. </p>
+    <hr>
+    <h1>Test</h1>
+    <span>lorem ipsum...</span>
 </div>
+
+<div class="body_right">
+    <button>ADS</button>
+    <button>ADS</button>
+</div>
+
 
 <footer>
     <p>&Footer Text</p>

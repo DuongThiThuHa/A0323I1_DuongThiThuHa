@@ -346,13 +346,11 @@ where year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021);
 set sql_safe_updates = 1;
 
 -- 17. Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
-select khach_hang.ma_khach_hang, sum(hop_dong.tien_dat_coc+(hop_dong_chi_tiet.so_luong * dich_vu_di_kem.gia)) as thanh_tien from khach_hang 
-join loai_khach on khach_hang.ma_khach_hang = loai_khach.ma_loai_khach 
-right join hop_dong on hop_dong.ma_khach_hang  = khach_hang.ma_khach_hang
-left join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
+select * from khach_hang 
+join loai_khach on khach_hang.ma_loai_khach = loai_khach.ma_loai_khach 
+left join hop_dong on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
 left join dich_vu on dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
-left join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
-where year(ngay_lam_hop_dong) = 2021 and ten_loai_khach = 'Platinum'
+where loai_khach.ten_loai_khach = 'Platinium'
 group by khach_hang.ma_khach_hang
 having thanh_tien >= 10000000;
 
@@ -364,7 +362,7 @@ where year(ngay_lam_hop_dong) < 2021);
 set sql_safe_updates = 1;
 
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
-select dich_vu_di_kem.ma_dich_vu_di_kem from  dich_vu_di_kem
+select dich_vu_di_kem.ma_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem from dich_vu_di_kem
 join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
 join hop_dong on hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
 where year(hop_dong.ngay_lam_hop_dong) = 2020
@@ -375,3 +373,74 @@ having sum(hop_dong_chi_tiet.so_luong) > 10;
 select ma_nhan_vien as id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi from nhan_vien
 union all 
 select ma_khach_hang as id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi from khach_hang;
+
+-- 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
+create view v_nhan_vien as 
+select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten,nhan_vien.so_dien_thoai,nhan_vien.ngay_sinh,nhan_vien.dia_chi from nhan_vien 
+join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+where (nhan_vien.dia_chi = 'Hai Chau') and exists
+(select hop_dong.ma_hop_dong from hop_dong where hop_dong.ma_khach_hang = khach_hang.ma_khach_hang and hop_dong.ngay_lam_hop_dong = '12/12/2019');
+
+-- 22.	Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
+update v_nhan_vien 
+set nhan_vien.dia_chi = 'Lien Chieu';
+
+--  23.	Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với ma_khach_hang được truyền vào như là 1 tham số của sp_xoa_khach_hang.
+delimiter // 
+create procedure sp_xoa_khach_hang(in p_ma_khach_hang int)
+begin 
+	delete from khach_hang where ma_khach_hang = p_ma_khach_hang ;
+end;
+// delimiter 
+
+call sp_xoa_khach_hang(1) ;
+
+-- 24.	Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong  
+-- yêu cầu sp_them_moi_hop_dong phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, 
+-- với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan
+delimiter //
+create procedure sp_them_moi_hop_dong (in p_ma_hop_dong int ,in p_ngay_lam_hop_dong datetime ,in p_ngay_ket_thuc datetime ,in p_tien_dat_coc double,in p_ma_nhan_vien int ,in p_ma_khach_hang int ,in p_ma_dich_vu int , out result varchar(50))
+begin
+    if exists (select distinct hop_dong.ma_hop_dong from hop_dong ) then 
+	set result = 'Hop dong da ton tai ';
+    end if;
+    
+    if exists (select distinct nhan_vien.ma_nhan_vien from nhan_vien ) then 
+    set result = 'Nhan vien da co hop dong';
+    end if;
+    
+    if exists (select distinct khach_hang.ma_khach_hang from khach_hang ) then 
+    set result = 'Khach hang da co hop dong ';
+    end if;
+    
+    if  exists (select distinct dich_vu.ma_dich_vu from dich_vu ) then 
+    set result = 'Dich vu da duoc su dung';
+    end if;
+    
+    if exists (select distinct hop_dong_chi_tiet.ma_hop_dong_chi_tiet from hop_dong_chi_tiet) then 
+    set result = 'Hop dong nay da duoc su dung';
+    end if;
+    
+     
+    insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu) 
+    values (p_ma_hop_dong, p_ngay_lam_hop_dong, p_ngay_ket_thuc, p_tien_dat_coc, p_ma_nhan_vien, p_ma_khach_hang,p_ma_dich_vu);
+end //
+ delimiter ;
+
+call sp_them_moi_hop_dong(14,'2023-09-06','2023-09-12',200000,2,2,3,@result);
+select @result;
+
+-- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong
+-- hiển thị tổng số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
+// delimiter 
+create trigger tr_xoa_hop_dong
+begin 
+declare count int;
+	delete from hop_dong ;
+    select count(*) into count from hop_dong ;
+   set @count = count;
+end
+// delimiter 
+
+select @count;
+    
