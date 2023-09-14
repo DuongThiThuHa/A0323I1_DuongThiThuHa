@@ -1,13 +1,16 @@
-div{
+div {
     width: 40%;
 }
-h1{
+
+h1 {
     font-family: "Times New Roman";
 }
-span{
+
+span {
     color: cornflowerblue;
 }
-p{
+
+p {
     text-indent: 30px;
 }
 

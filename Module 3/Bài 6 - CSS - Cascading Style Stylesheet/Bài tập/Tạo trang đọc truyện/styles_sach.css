@@ -1,13 +1,14 @@
-h1{
+h1 {
     font-family: "Times New Roman";
     text-align: center;
     font-size: xx-large;
 }
 
-hr{
+hr {
     width: 15%;
 }
-.book{
+
+.book {
     display: flex;
     height: 350px;
     width: 250px;
@@ -15,7 +16,7 @@ hr{
     flex-direction: column;
 }
 
-.book_store{
+.book_store {
     display: flex;
     width: 100%;
     text-align: center;
@@ -31,7 +32,7 @@ img {
     align-items: center;
 }
 
-a{
+a {
     font-family: "Times New Roman";
     font-size: 18px;
     color: cornflowerblue;
