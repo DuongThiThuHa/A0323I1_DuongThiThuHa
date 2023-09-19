@@ -5,44 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b416f99d-5e1b-49f9-9c70-eec3a2c1ea87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/phim_hoat_hinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/Style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/landing_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module 1/Bài tập/Bài Tập Thêm 1" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 1/Bài tập/Bài Tập Thêm 1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Module 3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 1 - Cơ sỡ dữ liệu quan hệ/Bài Tập/Quan_Ly_Sinh_Vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 1 - Cơ sỡ dữ liệu quan hệ/Bài Tập/Quan_Ly_Sinh_Vien.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Bài Tập/Mo_Hinh_ERD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Bài Tập/Mo_Hinh_ERD.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Bài Tập/Quan_Ly_Ban_Hang.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Bài Tập/Quan_Ly_Ban_Hang.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Thực Hành/quan_ly_san_pham.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Thực Hành/quan_ly_san_pham.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Thực Hành/quan_ly_sinh_vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 2 - Thiết kế và tạo CSDL/Thực Hành/quan_ly_sinh_vien.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Bài Tập/Quan_Ly_Ban_Hang_Truy_Van.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Bài Tập/Quan_Ly_Ban_Hang_Truy_Van.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Bài Tập/Quan_Ly_Sinh_Vien_Truy_Van.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Bài Tập/Quan_Ly_Sinh_Vien_Truy_Van.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Thực Hành/quan_ly_sinh_-vien(Truy vấn DL).sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Thực Hành/quan_ly_sinh_-vien(Truy vấn DL).sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Thực Hành/quan_ly_sinh_-vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 3 - Thao tác với CSDL/Thực Hành/quan_ly_sinh_-vien.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 4 - Các hàm thao tác/Bài Tập/quan_ly_sinh_vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 4 - Các hàm thao tác/Bài Tập/quan_ly_sinh_vien.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 4 - Các hàm thao tác/Thực Hành/quan_ly_sinh_vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 4 - Các hàm thao tác/Thực Hành/quan_ly_sinh_vien.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Bài Tập/index_view_store_procedure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Bài Tập/index_view_store_procedure.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/index.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/index.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/mysqlsampledatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/mysqlsampledatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/store_procedure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/store_procedure.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/view.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/view.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Nhúng CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Nhúng CSS/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Tạo trang đọc truyện/styles_sach.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Tạo trang đọc truyện/styles_sach.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Tạo trang đọc truyện/tao_trang_doc_sach.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Tạo trang đọc truyện/tao_trang_doc_sach.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Định dạng văn bản/dinh_dang_van_ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Định dạng văn bản/dinh_dang_van_ban.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Định dạng văn bản/styles_vb.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Bài tập/Định dạng văn bản/styles_vb.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Thực Hành/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 6 - CSS - Cascading Style Stylesheet/Thực Hành/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/tao_layout_rwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/tao_layout_rwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/gallery_simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/gallery_simple.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Thực Hành/form_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Thực Hành/form_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case Study SQL/furama.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Case Study SQL/furama.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/ss2_tkcsdk_a03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/ss2/ss2/ss2_tkcsdk_a03.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/ss5_view_index_sp_function_trigger/ss2_tkcsdk_a03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/ss5_view_index_sp_function_trigger/ss2_tkcsdk_a03.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +41,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -80,6 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false">
@@ -96,6 +78,21 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -117,6 +114,30 @@
       <workItem from="1694615297892" duration="51000" />
       <workItem from="1694656506504" duration="4340000" />
       <workItem from="1694671290198" duration="5117000" />
+      <workItem from="1694778725947" duration="696000" />
+      <workItem from="1694779464628" duration="609000" />
+      <workItem from="1694780115594" duration="1822000" />
+      <workItem from="1694782693135" duration="457000" />
+      <workItem from="1694783176985" duration="265000" />
+      <workItem from="1694783467058" duration="231000" />
+      <workItem from="1694783727360" duration="877000" />
+      <workItem from="1694784644326" duration="789000" />
+      <workItem from="1694785460242" duration="1297000" />
+      <workItem from="1694786792292" duration="68000" />
+      <workItem from="1694786889240" duration="1293000" />
+      <workItem from="1694826068022" duration="79000" />
+      <workItem from="1695019359695" duration="825000" />
+      <workItem from="1695020434737" duration="593000" />
+      <workItem from="1695035109725" duration="146000" />
+      <workItem from="1695035306034" duration="1379000" />
+      <workItem from="1695036745907" duration="1867000" />
+      <workItem from="1695038651235" duration="597000" />
+      <workItem from="1695039384175" duration="922000" />
+      <workItem from="1695045471445" duration="715000" />
+      <workItem from="1695046255077" duration="204000" />
+      <workItem from="1695046491180" duration="238000" />
+      <workItem from="1695046851285" duration="296000" />
+      <workItem from="1695102587062" duration="541000" />
     </task>
     <servers />
   </component>
