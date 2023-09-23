@@ -4,25 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b416f99d-5e1b-49f9-9c70-eec3a2c1ea87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/landing_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/test.html" afterDir="false" />
+    <list default="true" id="f2951044-d372-442f-bd0a-752f90337718" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/src/main/java/com/example/webapp/ProductDiscountCalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/src/main/webapp/display-discount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module 1/Bài tập/Bài Tập Thêm 1" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 1/Bài tập/Bài Tập Thêm 1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/gallery_simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 8 - Bootsrap cơ bản/Bài Tập/gallery_simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/mysqlsampledatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 5 - View,Index,SP/Thực Hành/mysqlsampledatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/phim_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/phim_hoat_hinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/tao_layout_rwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bài 7 - Thiết kế bố cục trang web/Bài Tập/tao_layout_rwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss1/ss1/Screenshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss1/ss1/Screenshot_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/EERD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/HỆ THỐNG QUẢN LÝ ĐÀO TẠO CỦA CODEYEM.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/ss2_tkcsdk_a03.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss2/ss2/thiet_ke_db_ERD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/Bảng dữ liệu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/Screenshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/Screenshot_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/Screenshot_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss3/ss3/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/Screenshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/Screenshot_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/Screenshot_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/Screenshot_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss4/ss4/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/ss5_view_index_sp_function_trigger/ss2_tkcsdk_a03.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,52 +55,110 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2VLUoIs77kxYDNxgaA81VkVLq2D" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2VmkesDeyhHiIBIJpD6eboWUuap" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CodeGym/Bài Tập/Module 3/Bài 9 - Tổng quan ứng dụng web/WebApp/gradle/wrapper/gradle-wrapper.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Gradle : com.example : Module3-1.0-SNAPSHOT.war">
+        <file path="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___com_example___Module3_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
-        </artifact>
+        </file>
+        <file path="$PROJECT_DIR$/Bài 9 - Tổng quan ứng dụng web/WebApp/gradle/wrapper/gradle-wrapper.jar">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </file>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="36914fcf-36c0-4cd7-b352-d430a82b0e64" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56557" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -95,65 +176,22 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.example : Module3-1.0-SNAPSHOT.war" />
-        </option>
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b416f99d-5e1b-49f9-9c70-eec3a2c1ea87" name="Changes" comment="" />
-      <created>1694615028047</created>
+      <changelist id="f2951044-d372-442f-bd0a-752f90337718" name="Changes" comment="" />
+      <created>1695448742013</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694615028047</updated>
-      <workItem from="1694615029925" duration="110000" />
-      <workItem from="1694615168987" duration="109000" />
-      <workItem from="1694615297892" duration="51000" />
-      <workItem from="1694656506504" duration="4340000" />
-      <workItem from="1694671290198" duration="5117000" />
-      <workItem from="1694778725947" duration="696000" />
-      <workItem from="1694779464628" duration="609000" />
-      <workItem from="1694780115594" duration="1822000" />
-      <workItem from="1694782693135" duration="457000" />
-      <workItem from="1694783176985" duration="265000" />
-      <workItem from="1694783467058" duration="231000" />
-      <workItem from="1694783727360" duration="877000" />
-      <workItem from="1694784644326" duration="789000" />
-      <workItem from="1694785460242" duration="1297000" />
-      <workItem from="1694786792292" duration="68000" />
-      <workItem from="1694786889240" duration="1293000" />
-      <workItem from="1694826068022" duration="79000" />
-      <workItem from="1695019359695" duration="825000" />
-      <workItem from="1695020434737" duration="593000" />
-      <workItem from="1695035109725" duration="146000" />
-      <workItem from="1695035306034" duration="1379000" />
-      <workItem from="1695036745907" duration="1867000" />
-      <workItem from="1695038651235" duration="597000" />
-      <workItem from="1695039384175" duration="922000" />
-      <workItem from="1695045471445" duration="715000" />
-      <workItem from="1695046255077" duration="204000" />
-      <workItem from="1695046491180" duration="238000" />
-      <workItem from="1695046851285" duration="296000" />
-      <workItem from="1695102587062" duration="541000" />
+      <updated>1695448742013</updated>
+      <workItem from="1695448742888" duration="782000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
